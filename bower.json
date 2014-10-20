@@ -1,0 +1,25 @@
+{
+  "name": "happytimes",
+  "version": "1.0.0",
+  "authors": [
+    "chrisjansky"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {},
+  "dependencies": {
+    "normalize-css": "latest",
+    "jquery": "latest",
+    "modernizr": "latest",
+    "chj-framework": "latest",
+    "jquery-pjax": "latest",
+    "jquery-easing-original": "latest"
+  }
+}
