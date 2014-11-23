@@ -1,0 +1,10 @@
+header.o-header
+  strong.o-logo
+    a(href="index", title="Zpět na úvodní stránku") HappyTimes
+  nav.o-nav
+    ul.o-nav__list.o-middot.o-middot--inline
+      each instance, index in navItems
+        if (pageSettings.index == index)
+          li.o-nav__item: a.o-nav__link.o-nav__selected!= instance.name
+        else
+          li.o-nav__item: a.o-nav__link(href=instance.link, title=instance.title)!= instance.name

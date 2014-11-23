@@ -1,0 +1,22 @@
+block template-variables
+
+doctype
+html.no-js(lang="cs")
+  head
+    block template-head
+      include ../partials/_html-head
+
+  body
+    script.
+      (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=184599681622026";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    block template-body
+      p Basic template.
+
+    block template-foot
+      include ../partials/_html-foot
