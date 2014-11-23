@@ -18,17 +18,17 @@
 		var superboxcont = $('<div class="superbox-content"></div>');
 		var superboxclose = $('<div class="superbox-close">&times;</div>');
 		
-		superbox.append(superboximg).append(superboxcont).append(superboxclose);
+		superbox.append(superboximg).append(superboxclose).append(superboxcont);
 		// superbox.append(superboximg).append(superboxclose).append(superalt);
 		
 		return this.each(function() {
 			
-			$('.imageLink').click(function(e) {
+			$('[data-superbox]').click(function(e) {
 				e.preventDefault();
 		
 				var currentimg = $(this).find('img');
 				var imgData = $(this).attr('href');
-				superboxcont.html($(this).siblings('.cont').html());
+				superboxcont.html($(this).siblings('[data-content]').html());
 //				alert(superboxcont);
 				superboximg.attr('src', imgData);
 				if (!currentimg.attr('alt') == '') {
