@@ -1,0 +1,102 @@
+"atractionItems": [
+  {
+    "name": "mini",
+    "title": "Skákací hrad — Mini",
+    "image": "mini2.jpg",
+    "description": "Nenáročný skákací hrad, který se hodí hlavně pro narozeninové oslavy nebo menší oslavy s&nbsp;malými dětmi.",
+    "for": "Vhodné až pro 5 dětí ve věku do 8 let pod dozorem obsluhy.",
+    "technical": "Prostor záboru 2,5&thinsp;x&thinsp;2,5&thinsp;x&thinsp;2,5m, váha 30 kg. Instalace na jakýkoliv povrch."
+  },
+  {
+    "name": "haja",
+    "title": "Skákací hrad — Hája",
+    "image": "haja2.jpg",
+    "description": "Atraktivní skákací hrad, jehož výhodou je jednoduchá obsluha.",
+    "for": "Vhodné až pro 10 dětí ve věku do 15 let pod dozorem obsluhy.",
+    "technical": "Prostor záboru 4,5&thinsp;x&thinsp;4,5&thinsp;x&thinsp;4,5m, váha 80 kg. Instalace na jakýkoliv povrch. Je potřeba příkon 220 V do 50 m. Neustálý odběr 0,95 kW."
+  },
+  {
+    "name": "young",
+    "title": "Young",
+    "image": "young1.jpg",
+    "description": "Atraktivní skákací hrad, jehož výhodou je jednoduchá obsluha a střecha.",
+    "for": "Vhodné až pro 10 dětí ve věku do 15 let pod dozorem obsluhy.",
+    "technical": "Prostor záboru 4&thinsp;x&thinsp;3,5&thinsp;x&thinsp;4,5m, váha 80 kg. Instalace na jakýkoliv povrch. Je potřeba příkon 220 V do 50 m. Neustálý odběr 0,95 kW."
+  },
+  {
+    "name": "saja",
+    "title": "Skákací hrad &thinsp;&mdash;&thinsp;Šája",
+    "image": "saja2.jpg",
+    "description": "Atraktivní skákací hrad, jehož výhodou je jednoduchá obsluha.",
+    "for": "Vhodné až pro 10 dětí ve věku do 15 let pod dozorem obsluhy.",
+    "technical": "Prostor záboru 8&thinsp;x&thinsp;4,5&thinsp;x&thinsp;4,5m, váha 200 kg. Instalace na jakýkoliv povrch. Je potřeba příkon 220 V do 50 m. Neustálý odběr 0,95 kW."
+  },
+  {
+    "name": "vzc",
+    "title": "Velké zábavní centrum",
+    "image": "hrad2.jpg",
+    "description": "Nafukovací skluzavka, hrad a horolezecká stěna v jednom &mdash; <em>Jedinečná a jedna z největších atrakcí tohoto typu v ČR!</em>",
+    "more": "Velké zábavní centrum se skládá z obří nafukovací gumové skluzavky, na kterou se děti dostanou přes skákací hrad a horolezeckou stěnu. Děti se mohou klouzat, prolézat nafouknuté tunely, lézt na tunely, lézt a slézat po schůdkách, případně jen tak skákat na velké nafukovací ploše nebo pořádat závody ve sjezdu po skluzavce. Mimořádně vhodné pro velké dny dětí, firemní eventy&hellip;",
+    "for": "Hlavně dětem ve věku od 3 do 12 let pro zábavu a rozptýlení.",
+    "technical": "Prostor záboru 16&thinsp;x&thinsp;4,5&thinsp;x&thinsp;6,8m, váha 320 kg, lépe rovný prostor. K provozu atrakce je potřeba el. přívod 220 V do 50 m o příkonu 2,45 kW. Obsluha je zajištěna s provozem atrakce."
+  },
+  {
+    "name": "vfs",
+    "title": "Velká nafukovací skluzavka",
+    "image": "skluzavka2.jpg",
+    "description": "Skluzavka s horolezeckou stěnou &mdash; <em>Jediná atrakce tohoto druhu v ČR!</em>",
+    "more": "Obří skluzavka na kterou se děti dostanou přes horolezeckou stěnu. Děti milují skluzavky ze všeho nejvíc. Mohou si zde uspořádat závody a soutěže, nebo si trochu zaskákat v místě před horolezeckou stěnou.",
+    "technical": "Prostor záboru 11,5&thinsp;x&thinsp;4,5&thinsp;x&thinsp;6,5m, váha 220 kg, lépe rovný prostor. K provozu atrakce je potřeba el. přívod 220 V do 50 m o příkonu 1,6 kW. Obsluha je zajištěna s provozem atrakce."
+  },
+  {
+    "name": "mns",
+    "title": "Malá nafukovací skluzavka",
+    "image": "mns1.jpg",
+    "description": "Horolezecká stěna spojená se 4m dlouhou skluzavkou je zaručenou zábavou!",
+    "for": "Vhodné až pro 9 dětí ve věku do 8 let pod dozorem obsluhy.",
+    "technical": "Prostor záboru 5&thinsp;x&thinsp;4&thinsp;x&thinsp;4,5m, váha 90 kglépe rovný prostor. K provozu atrakce je potřeba el. přívod 220 V do 50 m o příkonu 0,95 kW."
+  },
+  {
+    "name": "fun",
+    "title": "Skákací hrad&thinsp;&mdash;&thinsp;Fun",
+    "image": "fun1.jpg",
+    "description": "Prvotřídní skákací hrad s větší nosností spojený s parádní skluzavkou!",
+    "more": "Nafukovací atrakce FUN je <strong>zárukou skvělé zábavy</strong> pro až 10 dětí do věku 15 let.",
+    "technical": "Prostor záboru 9&thinsp;x&thinsp;4&thinsp;x&thinsp;4,5m, váha 170 kg, lépe rovný prostor. K provozu atrakce je potřeba el. přívod 220 V do 50 m o příkonu 1,9 kW."
+  },
+  {
+    "name": "crazy",
+    "title": "Crazy",
+    "image": "crazy1.jpg",
+    "description": "Slaví váš syn/dcera narozeniny a pro své kamarády chce připravit opravdu bláznivé překvapení?",
+    "more": "Je na vašich akcích dost starších dětí, kteří na atrakce nemůžou, nebo je nudí malé skluzavky? Pokud ano, máme tu něco pro Vás! Dvě lajny skluzavek se na atrakci Crazy postarají o ten pravý zážitek ze sklouznutí!",
+    "for": "Vhodné pro děti od 8-15 let.",
+    "technical": "Prostor záboru 7,5&thinsp;x&thinsp;6&thinsp;x&thinsp;6m, váha 180 kg, lépe rovný prostor. K provozu atrakce je potřeba el. přívod 220 V do 50 m o příkonu 1,5 kW. Obsluha je zajištěna s provozem atrakce."
+  },
+  {
+    "name": "shodho",
+    "title": "Shoď ho! trochu jinak",
+    "image": "shodho2.jpg",
+    "description": "Atrakce určena k žertovným soubojům dvojic o udržení se na pohyblivém piedestalu &mdash; <em>Jediná atrakce tohoto druhu v ČR!</em>",
+    "for": "Hlavně dětem ve věku od 3 do 12 let pro zábavu a rozptýlení.",
+    "technical": "Ovál o rozměrech 5&thinsp;x&thinsp;5 m. Je třeba příkon 220 V do 50 m. Neustálý odběr 0,95 kW. Váha atrakce 85kg."
+  },
+  {
+    "name": "sumo",
+    "title": "Sumo ring pro dospělé",
+    "image": "sumo2.jpg",
+    "description": "Na velké žíněnce 5&thinsp;x&thinsp;5 m probíhá zápas dvou účastníků&thinsp;&ndash;&thinsp;zápasníků sumo&thinsp;&ndash;&thinsp;ve zvětšovacích sumo oblecích!",
+    "more": "Zápasníci sumo mají za úkol povalit soupeře na žíněnku nebo ho vytlačit z kruhu &ndash; to ale díky jejich oblekům není vůbec snadné! Zápasnické obleky zvětšují objem účastníků a ti pak mají problém i s vlastním pohybem. Důležité je zůstat na žíněnce a na nohou. Pravidla hry vychází z klasické sportovní disciplíny &ndash; zápasu sumo.",
+    "for": "Pro děti od 15 let (záleží na výšce dětských účastníků) a pro dospělé.",
+    "technical": "Prostor záboru 5&thinsp;x&thinsp;5 m, váha 130 kg. Instalace na rovný a pevný povrch."
+  },
+  {
+    "name": "bungee",
+    "title": "Bungee running&thinsp;&mdash;&thinsp;2&nbsp;dráhy v 1",
+    "image": "bungee2.jpg",
+    "description": "Bungee running znamená běh na gumě &ndash; soutěžící mají připnuté gumové lano za speciální úvaz kolem těla a snaží se umístit marker ze suchého zipu co nejdále. <em>Jedinečná atrakce v ČR!</em>",
+    "more": "Tato atrakce se také dá použít jako přetahovaná dvou soutěžících na jednom laně.",
+    "for": "Vhodná jak pro děti, tak i pro dospělé. Děti mají jednoduché bungee lano, dospělí dvojité.",
+    "technical": "Prostor záboru 10&thinsp;x&thinsp;3x&thinsp;2,5 m, váha 150 Kg. Vyžaduje rovnější povrch. Neustálý odběr 0,95 kW."
+  }
+]
