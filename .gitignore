@@ -16,6 +16,9 @@ node_modules
 ## Bower
 bower_components
 
+*.html
+*.jpg
+*.png
 ignore
 public
 source_files
