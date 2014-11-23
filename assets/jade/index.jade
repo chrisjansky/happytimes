@@ -1,0 +1,54 @@
+extends templates/_basic
+
+block template-variables
+  - var pageSettings = {index: 0}
+
+block template-body
+  .outer
+    include partials/_header
+    
+    .inner
+      section#intro
+        h1.t-h1 Nejzábavnější atrakce svého druhu
+        p.big
+          | Zdravíme všechny, kteří k nám zavítali na nově spuštěnou stránku!
+          br
+          | Na akcích s námi se budou bavit nejen Vaše děti, ale také Vy, rodiče.
+        p
+          | V sekci 
+          a(href="atrakce") Nafukovací atrakce
+          |  najdete výčet našich profesionálních atrakcí a jejich popis. 
+          a(href="akce") Akce na klíč
+          |  Vám nabídnou pohled na atrakce a zábavu, které pro Vás zařídíme! Pokud byste měli jakýkoli dotaz, neváhejte nám
+          script.
+            //<![CDATA[
+            <!--
+            var x="function f(x){var i,o=\"\",l=x.length;for(i=0;i<l;i+=2) {if(i+1<l)o+=x.charAt(i+1);try{o+=x.charAt(i);}catch(e){}}return o;}f(\"ufcnitnof x({)av r,i=o\\\"\\\"o,=l.xelgnhtl,o=;lhwli(e.xhcraoCedtAl(1/)3=!85{)rt{y+xx=l;=+;lc}tahce({)}}of(r=i-l;1>i0=i;--{)+ox=c.ahAr(t)i};erutnro s.buts(r,0lo;)f}\\\"(9),1\\\"\\\\QYv[c|7~00\\\\\\\\: $v83'=!+. r&\\\\\\\\-# $(r)2\\\\-\\\\\\\"/\\\\4c03\\\\\\\\02\\\\0X\\\\NX2S03\\\\\\\\1X03\\\\\\\\06\\\\03\\\\01\\\\\\\\MLkEow5kwnz}vcw{\\\"\\\\f(;} ornture;}))++(y)^(iAtdeCoarchx.e(odrChamCro.fngriSt+=;o27=1y%i;+=)y19==(iif){++;i<l;i=0(ior;fthnglex.l=\\\\,\\\\\\\"=\\\",o iar{vy)x,f(n ioctun\\\"f)\")";
+            while(x=eval(x));
+            //-->
+            //]]>
+          | napsat na náš e-mail</a>, nebo nám rovnou 
+          a(href="kontakt") zavolat na telefon
+          | .
+
+    section#main.hrad
+      .top
+      .inner
+        section#social.cont
+          h2.t-h2
+            span
+              | Přidejte si nás na 
+              a.blue(href="https://www.facebook.com/HappyTimescz") Facebooku
+            |  &hellip; dozvíte se o slevách a akcích jako první!
+          #twitter
+          #fb
+            .fb-like-box(data-href="https://www.facebook.com/HappyTimescz", data-width="410", data-height="380", data-show-faces="false", data-stream="true", data-border-color="#eee", data-header="false")
+        footer
+          h3.t-h3 Poznejte náš svět zábavy!
+          a.uline.big(href="atrakce") Více informací o našem sortimentu
+          .o-partners
+            h5.o-partners__title.t-caps--small Spolupracujeme s
+            .o-partners__item
+              a.o-partners__link(href="http://www.jlvcatering.cz/")
+                img.o-partners__image(src="assets/images/logo_masters-catering.png", alt="Master's Catering")
+          include partials/_colophon

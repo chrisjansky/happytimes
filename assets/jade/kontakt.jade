@@ -1,0 +1,46 @@
+extends templates/_basic
+
+block template-variables
+  - var pageSettings = {index: 3}
+
+block template-body
+  #kontakt.outer
+    include partials/_header
+
+    .inner
+      section#intro
+        h1.t-h1 Napište nám
+        p.big
+          | Zaujaly Vás naše služby? Ozvěte se, rádi připravíme zábavné odpoledne na míru právě Vám!
+    section#main.hrad
+      .top
+      .inner
+        section.cont.o-contact
+          h2.t-h2 Kontaktní informace
+          ul.nolist.big.first
+            li.mail
+              script.
+                //<![CDATA[
+                <!--
+                var x="function f(x){var i,o=\"\",ol=x.length,l=ol;while(x.charCodeAt(l/13)!=37){try{x+=x;l+=l;}catch(e){}}for(i=l-1;i>=0;i--){o+=x.charAt(i);}return o.substr(0,ol);}f(\")2,\\\"meozpo1`r7/e9,%.2<43#)000\\\\PXSU500\\\\030\\\\eBT030\\\\FQ^[EI_^LDkEOFN430\\\\JPOK@M=B z~hq8v*7<}~tdf|z\\\"\\\\771\\\\dlerejg\\\"(f};o nruter};))++y(^)i(tAedoCrahc.x(edoCrahCmorf.gnirtS=+o;721=%y;++y)2<i(fi{)++i;l<i;0=i(rof;htgnel.x=l,\\\"\\\"=o,i rav{)y,x(f noitcnuf\")";
+                while(x=eval(x));
+                //-->
+                //]]>
+            li.phone 734 331 816
+          ul.nolist.big
+            li.address U Trati 687/13
+            li Říčany
+            li 251 01
+            li.small
+              a(href="http://goo.gl/maps/Fx46x") Ukázat na mapě
+          h2.t-h2 Majitelé
+          ul.nolist.small.third
+            li.person Jan Havel
+            li IČO: 88649024
+          ul.nolist.small
+            li.person Michal Šafránek
+            li IČO: 74916921
+        footer
+          h3.t-h3 Poznejte náš svět zábavy!
+          a.uline.big(href="atrakce") Více informací o našem sortimentu
+          include partials/_colophon

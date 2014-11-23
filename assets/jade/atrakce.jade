@@ -1,0 +1,70 @@
+extends templates/_basic
+
+block template-variables
+  - var pageSettings = {index: 1}
+
+block template-body
+  .outer
+    include partials/_header
+
+    .inner
+      section#intro
+        h1.t-h1
+          | Od skakacích hradů až
+          br
+          | po kompletní narozeninové párty
+        p.big
+          | Naší specialitou jsou 
+          a(href="#atrakce") nafukovací atrakce
+          |  — skákací hrady, skluzavky atd. Dále se zabýváme organizací 
+          a(href="#akce") tématických zábavních akcí
+          | .
+      section#atrakce.nabidka
+        h2.t-caps Nafukovací atrakce
+        p Skákací hrady jsou velmi oblíbené atrakce při nejrůznějších dětských akcích — narozeninové párty, dětské dny, poutě, sezónní slavnosti, atd.
+
+    section.o-offers.superbox
+      each instance in atractionItems
+        article.o-item(class="o-item--#{instance.name}")
+          a.o-item__link(href="assets/images/nabidka/#{instance.image}", data-superbox)
+            img(src="assets/images/nabidka/#{instance.image}", alt=instance.title)
+          h3.t-h3: span!= instance.title
+          section.o-item__content(data-content)
+            h2.o-item__title.t-h2: span!= instance.title
+            p.o-item__big!= instance.description
+            if (instance.more)
+              p.o-item__small!= instance.more
+            if (instance.for)
+              .o-item__for
+                p
+                  strong Atrakce určena pro: 
+                  != instance.for
+            if (instance.technical)
+              .o-item__technical
+                p
+                  strong Technický popis a požadavky: 
+                  != instance.technical
+            a.o-button(href="#") Do poptávky
+
+    .inner
+      section.o-price
+        h2.t-h2 Nejsme plátci DPH
+        .col.left
+          h5 Nabídková cena bude zahrnovat:
+          ul.o-middot.o-middot--stacked
+            li 4 hodiny provozního času
+            li možnost prolongace
+            li instalaci a obsluhu atrakce
+            li pojištění proti úrazu
+            li programové konzultace
+            li volný vstup do atrakcí
+        .col.right
+          h5 Nabídková cena nezahrnuje:
+          ul.o-middot.o-middot--stacked
+            li dopravu z výchozího místa v ceně 7,- Kč / 1 km
+          small Při vyšším počtu atrakcí je počítána doprava pouze jedné, s výjimkou kombinace atrakcí neskladných.
+            
+      footer
+        h3.t-h3 Líbí se Vám, co nabízíme?
+        a.uline.big(href="kontakt") Rádi zodpovíme veškeré Vaše dotazy
+        include partials/_colophon
