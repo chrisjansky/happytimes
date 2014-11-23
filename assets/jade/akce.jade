@@ -1,0 +1,167 @@
+extends templates/_basic
+
+block template-variables
+  - var pageSettings = {index: 2}
+
+block template-body
+  #page-gallery.outer
+    include partials/_header
+
+    .inner
+      section#intro
+        h1.t-h1 Akce na klíč
+        p.big Podívejte se, kde všude jsme šířili radost!
+      
+  #akce.outer.kopec
+    .inner
+      section.nabidka.superbox.o-offers
+        #vata.o-item
+          a.imageLink(href="assets/images/nabidka/vata1.jpg")
+            img(src="assets/images/nabidka/vata1.jpg", alt="Curková vata")
+          h3.t-h3
+            span
+              | Cukrová
+              br
+              | vata
+          .cont
+            p.big
+              | V nabídce pro Vás máme několik profesionálních elektrických strojů na výrobu cukrové vaty s výkonem až 250 vat za hodinu, včetně vyškolené a usměvavé obsluhy.
+            p.small
+              br
+              br
+              | Pozvat si nás můžete na kulturní a společenské akce jako jsou:
+              br
+              | &middot; dětské dny, slavnosti a narozeninové oslavy
+              br
+              | &middot; firemní a školní akce, volební kampaně
+              br
+              | &middot; dny otevřených dveří
+              br
+              | &middot; poutě
+              br
+              | &middot; sportovní utkání
+        //
+                  
+        #hvezda.o-item
+          a.imageLink(href="assets/images/nabidka/hvezda2.jpg")
+            img(src="assets/images/nabidka/hvezda1.jpg", alt="Skákací hrad Hvězda")
+          h3.t-h3
+            span Skákací hrad — Hvězda
+          .cont
+            p.big
+              | Skládá se ze skákacího hradu, který je zabezpečen ze tří stran síťovinou, která brání případnému vypadnutí malých kosmonautů do volného prostoru a skluzavky. Tento typ skákacího hradu je velice vhodný jak pro soukromé oslavy tak i pro komerční akce.
+            p.small
+              | Jeho velké přednosti jsou lehká manipulace daná malou hmotností a minimální obsluha.
+            p
+              strong Atrakce je určena pro:
+              | Až pro 5 dětí ve věku do 8 let pod dozorem obsluhy.
+            small
+              span Technický popis a požadavky:
+              | Prostor záboru 3 x 4 x 2m, váha 30 kg s maximálním zatížením 226kg. Instalace možná na jakýkoliv povrch.
+        //
+                  
+        #masinka.o-item
+          a.imageLink(href="assets/images/nabidka/masinka2.jpg")
+            img(src="assets/images/nabidka/masinka1.jpg", alt="Zábavní centrum Mašinka")
+          h3.t-h3
+            span Zábavní centrum — Mašinka
+          .cont
+            p.big
+              | Nenáročný skákací hrad ve tvaru mašinky. Do atrakce se dá vlézt tunelem v jejím čele, ven se sklouzává po skluzavce. Zbylé strany jsou zabezpečeny síťovinou.
+            p.small
+              | Tento typ skákacího hradu je velice vhodný jak pro soukromé oslavy tak i pro komerční akce. Jeho velkou předností je lehká manipulace daná malou hmotností a minimální obsluha.
+            p
+              strong Atrakce je určena pro:
+              | Až pro 5 dětí ve věku do 8 let pod dozorem obsluhy.
+            small
+              span Technický popis a požadavky:
+              | Prostor záboru 5 x 2,5 x 2,4m, váha 25 kg. Instalace na jakýkoliv povrch.
+        //
+                  
+        #mzc.o-item
+          a.imageLink(href="assets/images/nabidka/mzc2.jpg")
+            img(src="assets/images/nabidka/mzc1.jpg", alt="Malé zábavní centrum – 11 v 1")
+          h3.t-h3
+            span Malé zábavní centrum — 11 v 1
+          .cont
+            p.big
+              | Toto zábavní centrum poskytne vašem dětem nádherní chvíle strávení skákáním, šplháním, prolézáním tunelem, klouzáním, možností hraní basketbalu nebo zábavným dováděním v této atrakci. Z tohoto důvodu je u dětí velice oblíbená a nechtějí toto zábavní centrum opustit.
+            p
+              strong Atrakce je určena pro:
+              | Vhodné až pro 6 dětí ve věku do 5 let pod dozorem obsluhy.
+            small
+              span Technický popis a požadavky:
+              | Prostor záboru 4,5 x 4,5 x 2,5m, váha 30 kg. Instalace na jakýkoliv povrch. Je potřeba příkon 220 V do 50 m.
+        //
+                  
+        #narparty.o-item
+          a.imageLink(href="assets/images/nabidka/party2.jpg")
+            img(src="assets/images/nabidka/party1.jpg", alt="Narozeninová párty")
+          h3.t-h3
+            span Narozeninové párty
+          .cont
+            p.big
+              em
+                | Pozvěte si k sobě na narozeniny svého dítka klauna Ferdu, animátory nebo dokonce cvičené papoušky!
+              | Na oslavence a jeho kamarády čeká perfektní zábava v podobě připraveného programu, písniček, soutěží, modelování balónků, kouzlení a přetahování.
+            p.small
+              | Každý chlapec i dívka na oslavě dostane speciální DÁREK a pro oslavence je připraveno jedinečné překvapení. O průběh celé oslavy se postaráme, jsme schopni připravit celkovou výzdobu v podobě balónkových dekorací, héliových balónků a nejrůznějších drobností. Jako zvláštní servis také nabízíme tzv. narozeniny na klíč. Jsme schopni zajistit také malé občerstvení popřípadě catering.
+        //
+                  
+        #modelbalon.o-item
+          a.imageLink(href="assets/images/nabidka/model2.jpg")
+            img(src="assets/images/nabidka/model1.jpg", alt="Modelování balónků")
+          h3.t-h3
+            span Modelování balónků
+          .cont
+            p.big
+              | Výtvarník s dětmi modeluje postavičky z dlouhých barevných balónků a s jeho pomocí se každý naučí vytvořit základní tvary jako včelka, pejsek, meč či žirafa. Zručnější z dětí zvládnout i květinu nebo tygříka. Balónky se dají vytvarovat do mnohých tvarů a velikostí jakou jsou například všemožná zvířátka, letadla nebo čapky.
+            p.small Cena: 1. hodina 1500,-, každá další 600,-
+        //
+                  
+        #facepaint.o-item
+          a.imageLink(href="assets/images/nabidka/paint2.jpg")
+            img(src="assets/images/nabidka/paint1.jpg", alt="Face painting")
+          h3.t-h3
+            span Malování na obličej
+          .cont
+            p.big
+              | Malování na obličej je velmi oblíbenou zábavou na pořádaných dětských akcích, eventech či narozeninových party.
+            p.small
+              | Děti i dospělí si mohou vybrat kresbu z přehledného katalogu nebo rozhodnout se pro svůj vymyšlený motiv. Používáme pouze dermatologicky testované barvy na tělo, splňující normy EU. Veškerý používaný materiál je hygienicky ošetřován před každým použitím.
+            p Cena: 1. hodina 1500,-, každá další 600,-
+        //
+                  
+        #maskoti.o-item
+          a.imageLink(href="assets/images/nabidka/maskoti2.jpg")
+            img(src="assets/images/nabidka/maskoti1.jpg", alt="Maskoti")
+          h3.t-h3
+            span
+              | Zábavní
+              br
+              | maskoti
+          .cont
+            p.big
+              | Ať již plánujete narozeninovou párty, firemní večírek nebo hledáte vynikající reklamní poutač, můžeme vám nabídnout z celé palety různých maskotů.
+            p.small
+              | Zde je vidět pouze část z celkové naší nabídky, proto nás neváhejte kontaktovat pro bližší informace.
+        //
+                  
+        #balondekor.o-item
+          a.imageLink(href="assets/images/nabidka/dekor2.jpg")
+            img(src="assets/images/nabidka/dekor1.jpg", alt="Balónkové dekorace")
+          h3.t-h3
+            span
+              | Balónkové
+              br
+              | dekorace
+          .cont
+            p.big
+              | Balónkové dekorace udělají z vaší oslavy narozenin nebo firemního večírku nezapomenutelnou akci!
+            p.small
+              | Nabízíme vytvoření narozeninové dekorace na míru, balónky nafukované vzduchem i heliem či fóliové balónky s nejrůznějšími tvary. V případě zájmu lze připravit i speciální balónky s číslem nebo jménem.
+      
+      footer
+        h1.t-h1 Chcete se také tak pobavit?
+        a.uline.big(href='kontakt') Napište, my to zařídíme!
+        include partials/_colophon
