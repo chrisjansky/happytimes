@@ -1,0 +1,30 @@
+// Navigation.
+.o-nav__list {
+  text-align: center;
+  // Magic number, optical centering.
+  padding-right: em(20);
+}
+.o-nav__item {
+  &:first-child + li + li {
+    margin-left: em(280);
+    &:before {
+      display: none;
+    }
+  }
+}
+.o-nav__selected {
+  color: $c-grey3 !important;
+  border-bottom: 3px solid rgba(136, 136, 136, 0.5);
+  padding-bottom: 3px;
+}
+
+.o-nav__link {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  @include state--link {
+    color: $c-color2;
+  }
+  @include state--active {
+    color: $c-hover;
+  }
+}

@@ -1,0 +1,62 @@
+.superbox-show {
+  width: 100%;
+  float: left;
+  text-align: left;
+  @include padding(em($ratio--b) null em($ratio--l));
+  // border-top: 1px solid white;
+  // position: relative;
+  // width: 100%;
+  // margin-bottom: 2em;
+  // img {
+  //   max-width: 470px;
+  //   margin: 0 1.5em 0.5em 0;
+  //   float: left;
+  // }
+}
+.superbox-current-img {
+  float: left;
+  margin-right: em($ratio--m);
+  background-color: white;
+  border-radius: $radius--b;
+  padding: em($ratio--xs);
+}
+.superbox-caption {
+  margin-bottom: 0;
+  color: $c-text;
+  font-size: em(14);
+  &.empty {
+    display: none;
+  }
+}
+.superbox-content {
+  color: $c-text;
+  @include collapse-children;
+}
+.superbox-close {
+  display: block;
+  float: right;
+  color: white;
+  font-size: em(27);
+  background-color: $c-green--dark;
+  border-radius: $radius--b;
+  padding: .1em .5em .3em;
+  margin-left: em($ratio--b);
+  margin-bottom: em($ratio--b);
+  &:hover {
+    background-color: $c-hover;
+    cursor: pointer;
+  }
+}
+// POUZE PRO NABIDKA??
+// .superbox-show {
+//   margin-top: 1.5em;
+//   img {
+//     max-width: 470px;
+//     margin: 0 1.5em 1.5em 0;
+//     float: left;
+//   }
+// }
+
+.superbox-close {
+  transition: background-color $duration--b;
+}

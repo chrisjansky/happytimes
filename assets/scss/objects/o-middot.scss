@@ -1,0 +1,26 @@
+.o-middot {
+  list-style: none;
+  padding-left: 0;
+  li {padding-left: em($ratio--s); }
+  li:before {content: '\b7\a0'; }
+}
+.o-middot--inline {
+  li {
+    display: inline-block;
+    &:before {margin-right: em($ratio--s); }
+  }
+  li:first-child {
+    padding-left: 0;
+    &:before {display: none; }
+  }
+}
+.o-middot--stacked {
+  li {
+    position: relative;
+    padding-left: em($ratio--b);
+    &:before {
+      position: absolute;
+      left: 0;
+    }
+  }
+}
