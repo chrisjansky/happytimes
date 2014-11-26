@@ -1,7 +1,7 @@
 "atractionItems": [
   {
     "name": "mini",
-    "title": "Skákací hrad — Mini",
+    "title": "Skákací hrad&thinsp;&mdash;&thinsp;Mini",
     "image": "mini2.jpg",
     "description": "Nenáročný skákací hrad, který se hodí hlavně pro narozeninové oslavy nebo menší oslavy s&nbsp;malými dětmi.",
     "for": "Vhodné až pro 5 dětí ve věku do 8 let pod dozorem obsluhy.",
@@ -9,7 +9,7 @@
   },
   {
     "name": "haja",
-    "title": "Skákací hrad — Hája",
+    "title": "Skákací hrad&thinsp;&mdash;&thinsp;Hája",
     "image": "haja2.jpg",
     "description": "Atraktivní skákací hrad, jehož výhodou je jednoduchá obsluha.",
     "for": "Vhodné až pro 10 dětí ve věku do 15 let pod dozorem obsluhy.",
@@ -25,7 +25,7 @@
   },
   {
     "name": "saja",
-    "title": "Skákací hrad &thinsp;&mdash;&thinsp;Šája",
+    "title": "Skákací hrad&thinsp;&mdash;&thinsp;Šája",
     "image": "saja2.jpg",
     "description": "Atraktivní skákací hrad, jehož výhodou je jednoduchá obsluha.",
     "for": "Vhodné až pro 10 dětí ve věku do 15 let pod dozorem obsluhy.",
