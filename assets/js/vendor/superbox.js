@@ -12,53 +12,53 @@
 ;(function($) {		
 	$.fn.SuperBox = function(options) {
 		
-		var superbox      = $('<div class="superbox-show"></div>');
-		var superboximg   = $('<img src="" class="superbox-current-img">');
-		var superalt   = $('<p class="superbox-caption"></p>');
-		var superboxcont = $('<div class="superbox-content"></div>');
+		var superbox = $('<div class="superbox-show"></div>');
 		var superboxclose = $('<div class="superbox-close">&times;</div>');
-		
-		superbox.append(superboximg).append(superboxclose).append(superboxcont);
-		// superbox.append(superboximg).append(superboxclose).append(superalt);
+		var superboximg = $('<div class="superbox-img"></div>');
+		var superboxcont = $('<div class="superbox-content"></div>');
+
+		superbox.append(superboximg).append(superboxcont);
 		
 		return this.each(function() {
 			
 			$('[data-superbox]').click(function(e) {
 				e.preventDefault();
 		
-				var currentimg = $(this).find('img');
-				var imgData = $(this).attr('href');
-				superboxcont.html($(this).siblings('[data-content]').html());
-//				alert(superboxcont);
-				superboximg.attr('src', imgData);
-				if (!currentimg.attr('alt') == '') {
-					superalt.text(currentimg.attr('alt'));
-					superalt.removeClass('empty');
-				} else {
-					superalt.addClass('empty');
-				}
+				var $this = $(this);
+				var $content = $this.siblings("[data-content]");
+				var $images = $content.find("[data-images]");
+				var $text = $content.find("[data-text]");
+
+				superboximg
+					.html($images[0].outerHTML);
+				superboxcont
+					.html(superboxclose)
+					.append($text[0].outerHTML);
 				
-				if($('.superbox-current-img').css('opacity') == 0) {
-					$('.superbox-current-img').animate({opacity: 1});
-				}
-				
-				if ($(this).next().hasClass('superbox-show')) {
+				if ($this.next().hasClass('superbox-show')) {
 					superbox.toggle();
 				} else {
-					superbox.insertAfter($(this).parent()).css('display', 'block');
+					superbox.insertAfter($this.parent()).css('display', 'block');
 				}
+
+				var $imgArray = $images.find("img");
+
+				superboximg.find("[data-images]").bxSlider({
+					"adaptiveHeight": true,
+					buildPager: function(slideIndex) {
+						return $imgArray[slideIndex].outerHTML;
+					}
+				});
 				
 				setTimeout(function() {
 					$('html, body').stop(true, true).animate({
-						scrollTop:superbox.position().top - (currentimg.width()/1.1)
-					}, 'medium');
+						scrollTop: superbox.position().top
+					}, '400');
 				}, 100);
 			});
 						
 			$('.superbox').on('click', '.superbox-close', function() {
-				$('.superbox-current-img').animate({opacity: 0}, 200, function() {
-					$('.superbox-show').slideUp();
-				});
+				$('.superbox-show').slideUp(250);
 			});
 			
 		});
