@@ -1,0 +1,48 @@
+p a, h1 a, h2 a, h3 a, h4 a, h5 a {
+  text-decoration: none;
+  border-bottom: $line--s solid;
+}
+a {
+  transition: color $duration--s, border $duration--s;
+}
+
+// a.btn {
+//   display: inline-block;
+//   padding: .4em .8em .5em;
+//   color: white;
+//   &:link, &:visited {
+//     background-color: $c-color2 }
+//   &:hover, &:active {
+//     background-color: $c-hover }
+// }
+a.blue {
+  &:link, &:visited {
+    color: $c-color2;
+    border-bottom-color: $c-color2;
+  }
+  &:hover, &:active {
+    color: $c-hover;
+    border-bottom-color: $c-hover;
+  }
+}
+// a.light {
+//   &:link, &:visited {
+//     color: $c-grey3;
+//     border-bottom-color: $c-grey3;
+//   }
+//   &:hover, &:active {
+//     color: $c-hover;
+//     border-bottom-color: $c-hover;
+//   }
+// }
+#intro a, footer a {
+  // outline: 3px solid yellow;
+  &:link, &:visited {
+    color: $c-text;
+    border-bottom-color: $c-text;
+  }
+  &:hover, &:active {
+    color: $c-hover;
+    border-bottom-color: $c-hover;
+  }
+}
