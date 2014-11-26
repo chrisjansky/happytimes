@@ -1,0 +1,11 @@
+.l-outer {
+  background: url('../images/bg_top1.png') no-repeat center top;
+}
+.l-outer--kopec {
+  background: url('../images/bg_kopec1.png') no-repeat center top;
+  margin-top: em($ratio--m);
+}
+.l-inner {
+  width: em(820);
+  margin: 0 auto;
+}
