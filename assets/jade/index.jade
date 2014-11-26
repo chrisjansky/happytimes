@@ -4,10 +4,10 @@ block template-variables
   - var pageSettings = {index: 0}
 
 block template-body
-  .outer
+  .l-outer
     include partials/_header
     
-    .inner
+    .l-inner
       section#intro
         h1.t-h1 Nejzábavnější atrakce svého druhu
         p.big
@@ -33,14 +33,13 @@ block template-body
 
     section#main.hrad
       .top
-      .inner
+      .l-inner
         section#social.cont
           h2.t-h2
             span
               | Přidejte si nás na 
               a.blue(href="https://www.facebook.com/HappyTimescz") Facebooku
             |  &hellip; dozvíte se o slevách a akcích jako první!
-          #twitter
           #fb
             .fb-like-box(data-href="https://www.facebook.com/HappyTimescz", data-width="410", data-height="380", data-show-faces="false", data-stream="true", data-border-color="#eee", data-header="false")
         footer

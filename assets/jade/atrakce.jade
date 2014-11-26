@@ -4,10 +4,10 @@ block template-variables
   - var pageSettings = {index: 1}
 
 block template-body
-  .outer
+  .l-outer
     include partials/_header
 
-    .inner
+    .l-inner
       section#intro
         h1.t-h1
           | Od skakacích hradů až
@@ -29,29 +29,42 @@ block template-body
           a.o-item__link(href="assets/images/nabidka/#{instance.image}", data-superbox)
             img(src="assets/images/nabidka/#{instance.image}", alt=instance.title)
           h3.t-h3: span!= instance.title
-          section.o-item__content(data-content)
-            h2.o-item__title.t-h2: span!= instance.title
-            p.o-item__big!= instance.description
-            if (instance.more)
-              p.o-item__small!= instance.more
-            if (instance.for)
-              .o-item__for
-                p
-                  strong Atrakce určena pro: 
-                  != instance.for
-            if (instance.technical)
-              .o-item__technical
-                p
-                  strong Technický popis a požadavky: 
-                  != instance.technical
-            a.o-button(href="#") Do poptávky
+          section.o-item__hidden(data-content)
+            ul.bxslider(data-images)
+              li
+                img(src="assets/images/nabidka/#{instance.image}", alt="Fotka atrakce")
+              - var n = 0
+              while n < 3
+                li
+                  img(src="http://unsplash.it/640/360/?image=#{n * 100}", alt="unsplash.it")
+                  - n++
+              //- div.o-item__pager(data-pager)
+              //-   each instance in [0, 1, 2, 3]
+              //-     a(data-slide-index=instance, href="")
+              //-       img(src="http://unsplash.it/60/60/?image=#{100 + instance}", alt="unsplash.it")
+            .o-item__text(data-text)
+              h2.o-item__title.t-h2: span!= instance.title
+              p.big.o-item__big!= instance.description
+              if (instance.more)
+                p.o-item__small!= instance.more
+              if (instance.for)
+                .o-item__for
+                  p
+                    strong Atrakce určena pro: 
+                    != instance.for
+              if (instance.technical)
+                .o-item__technical
+                  p
+                    strong Technický popis a požadavky: 
+                    != instance.technical
+              a.o-item__button.o-button(href="#") Přidat k nacenění
 
-    .inner
+    .l-inner
       section.o-price
         h2.t-h2 Nejsme plátci DPH
         .col.left
           h5 Nabídková cena bude zahrnovat:
-          ul.o-middot.o-middot--stacked
+          ul.o-price__list.o-middot.o-middot--stacked
             li 4 hodiny provozního času
             li možnost prolongace
             li instalaci a obsluhu atrakce
@@ -60,11 +73,13 @@ block template-body
             li volný vstup do atrakcí
         .col.right
           h5 Nabídková cena nezahrnuje:
-          ul.o-middot.o-middot--stacked
+          ul.o-price__list.o-middot.o-middot--stacked
             li dopravu z výchozího místa v ceně 7,- Kč / 1 km
           small Při vyšším počtu atrakcí je počítána doprava pouze jedné, s výjimkou kombinace atrakcí neskladných.
-            
+
       footer
         h3.t-h3 Líbí se Vám, co nabízíme?
         a.uline.big(href="kontakt") Rádi zodpovíme veškeré Vaše dotazy
         include partials/_colophon
+
+    include partials/_sticky
