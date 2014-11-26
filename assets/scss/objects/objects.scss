@@ -1,0 +1,101 @@
+// Contact whatever.
+.o-contact {
+  @include clearfix;
+}
+// Offer Item.
+.o-offers {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include padding(null em($ratio--b));
+  @include media($phone--landscape) {
+    @include padding(null em($ratio--m));
+  }
+  @include media($tablet) {
+    @include padding(null em(180) null em($ratio--l));
+  }
+  @include media($desktop--narrow) {
+    max-width: em(1100);
+    @include padding(null em(180) null 5%);
+  }
+  @include media($desktop--wide) {
+    max-width: em(1440);
+    @include padding(null 10%);
+  }
+}
+
+// Button.
+.o-button {
+  display: inline-block;
+
+  line-height: em($height--b);
+
+  border-radius: $radius--b;
+  padding-left: em($ratio--b);
+  padding-right: em($ratio--b);
+  
+  text-decoration: none;
+  transition: background-color $duration--s;
+  @include state--link {
+    color: white;
+    background-color: $c-green--dark;
+  }
+  @include state--active {
+    background-color: $c-hover;
+  }
+}
+.o-button--block {
+  display: block;
+  text-align: center;
+  @include padding(null 0);
+}
+
+.o-sticky {
+  position: fixed;
+  background-color: white;
+  right: 0;
+  top: 30%;
+  @include radius--left($radius--b);
+  width: em(180);
+}
+.o-sticky__content {
+  padding: em($ratio--b);
+  @include collapse-children;
+}
+.o-sticky__list {
+  padding-left: em($ratio--m);
+  color: $c-grey3;
+  font-size: em($unit--s);
+}
+.o-sticky__button {
+  @include radius--right(0);
+  border-top-left-radius: 0;
+}
+
+.o-form__cell {
+  padding-bottom: em($ratio--b);
+  & + & {
+    padding-left: em($ratio--b);
+  }
+}
+.o-form__submit {
+  float: right;
+}
+.o-form__date {
+  width: em(84);
+}
+
+.o-quote__list {
+  color: $c-grey3;
+  @include padding(em($ratio--b) null em($ratio--b) 0);
+  border-top: $line--s dashed $c-color2--light;
+  border-bottom: $line--s dashed $c-color2--light;
+  list-style: none;
+  @include clearfix;
+  li {
+    float: left;
+    @include span-columns(1 of 3);
+    @include omega(3n);
+  }
+}
