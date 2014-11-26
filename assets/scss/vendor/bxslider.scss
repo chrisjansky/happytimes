@@ -1,0 +1,33 @@
+.bxslider {
+  @include clearfix;
+  @include margin(0 null);
+}
+.bx-wrapper {
+  // WTF Default styles.
+  .bx-viewport {
+    left: 0;
+  }
+  .bx-pager.bx-default-pager a {
+    background-color: rgba($c-grey5, .25);
+  }
+  .bx-pager {
+    bottom: auto;
+  }
+}
+.bx-pager-item {
+  vertical-align: middle;
+  margin: em($ratio--xs);
+}
+.bx-pager-link {
+  display: block;
+  padding: $line--b;
+  border-radius: $radius--b;
+  width: em(60);
+  transition: background-color $duration--s;
+  @include state--link {
+    background-color: $c-green--dark;
+  }
+  @include state--active {
+    background-color: white;
+  }
+}

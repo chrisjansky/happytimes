@@ -1,0 +1,57 @@
+.o-item {
+  display: inline-block;
+  width: em(240);
+  @include margin(null em($ratio--xs) em($ratio--xs));
+  vertical-align: top;
+  text-align: left;
+  color: $c-text;
+  @include media($desktop--wide) {
+    width: em(300);
+  }
+}
+.o-item__link {
+  display: block;
+  border-radius: $radius--b;
+  margin-bottom: em($ratio--b);
+  padding: em($ratio--xs);
+  transition: background-color $duration--b;
+
+  &:link, &:visited {
+    background-color: $c-green--dark;
+  }
+  &:hover, &:active {
+    background-color: white;
+  }
+  img {
+    width: 100%;
+  }
+}
+.o-item__hidden {
+  display: none;
+}
+
+.o-item__pager {
+  a {
+    display: inline-block;
+  }
+  a + a {
+    margin-left: em($ratio--s);
+  }
+}
+// .o-item__gallery {
+//   width: em(300);
+//   float: right;
+// }
+
+.o-item__text {
+  // overflow: auto;
+  color: $c-text;
+  @include collapse-children;
+}
+.o-item__title {
+  color: $c-color3;
+}
+.o-item__button {
+  float: right;
+  margin-top: em($ratio--b);
+}

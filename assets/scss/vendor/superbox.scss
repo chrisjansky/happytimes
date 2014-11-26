@@ -2,24 +2,18 @@
   width: 100%;
   float: left;
   text-align: left;
-  @include padding(em($ratio--b) null em($ratio--l));
-  // border-top: 1px solid white;
-  // position: relative;
-  // width: 100%;
-  // margin-bottom: 2em;
-  // img {
-  //   max-width: 470px;
-  //   margin: 0 1.5em 0.5em 0;
-  //   float: left;
-  // }
+  @include padding(em($ratio--m) null);
+  @include margin(em($ratio--b) null em($ratio--m));
+  border-top: $line--b dashed $c-green--dark;
+  border-bottom: $line--b dashed $c-green--dark;
 }
-.superbox-current-img {
+
+.superbox-img {
+  width: em(400);
   float: left;
   margin-right: em($ratio--m);
-  background-color: white;
-  border-radius: $radius--b;
-  padding: em($ratio--xs);
 }
+
 .superbox-caption {
   margin-bottom: 0;
   color: $c-text;
@@ -28,15 +22,16 @@
     display: none;
   }
 }
+
 .superbox-content {
-  color: $c-text;
-  @include collapse-children;
+  overflow: auto;
 }
+
 .superbox-close {
   display: block;
   float: right;
   color: white;
-  font-size: em(27);
+  font-size: em($ratio--m);
   background-color: $c-green--dark;
   border-radius: $radius--b;
   padding: .1em .5em .3em;
@@ -47,15 +42,6 @@
     cursor: pointer;
   }
 }
-// POUZE PRO NABIDKA??
-// .superbox-show {
-//   margin-top: 1.5em;
-//   img {
-//     max-width: 470px;
-//     margin: 0 1.5em 1.5em 0;
-//     float: left;
-//   }
-// }
 
 .superbox-close {
   transition: background-color $duration--b;

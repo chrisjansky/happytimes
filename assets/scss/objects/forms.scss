@@ -1,0 +1,105 @@
+// Text input.
+[class^="o-input"],
+[class*=" o-input"] {
+  height: em($height--b);
+  @include padding(null em($ratio--b));
+  border: 0;
+  background-color: $c-blue--pale;
+  color: $c-blue--dark;
+  @include placeholder {
+    color: $c-blue;
+  }
+  border-radius: $radius--b;
+  @include state--focus {
+    outline: 0;
+    background-color: tint($c-blue--pale, 40%);
+  }
+  // iOS reset.
+  -webkit-appearance: none;
+}
+.o-input--primary {
+  border-bottom: $line--b solid $c-blue--light;
+  font-weight: $font__sans--bold;
+}
+.o-form__required {
+  position: relative;
+  &:after {
+    content: "*";
+    color: $c-blue;
+    position: absolute;
+    right: em($ratio--b);
+    top: 0;
+  }
+}
+
+// Textarea.
+.o-textarea {
+  padding: em($ratio--s) em($ratio--b);
+  border: 0;
+  background-color: $c-blue--pale;
+  color: $c-blue--dark;
+  @include placeholder {
+    color: $c-blue;
+  }
+  @include state--focus {
+    outline: 0;
+    background-color: tint($c-blue--pale, 40%);
+  }
+  // iOS fix.
+  -webkit-appearance: none;
+  border-radius: $radius--b;
+}
+
+.o-submit {
+  height: em($height--b);
+  padding: 0 em($ratio--b);
+  border: 0;
+  background-color: $c-green;
+  color: white;
+  // iOS fix.
+  border-radius: $radius--b;
+  transition: background-color $duration--s;
+  @include state--active {
+    background-color: $c-hover;
+  }
+  @include state--focus {
+    outline: 0;
+  }
+}
+
+// Dropdown.
+.o-dropdown {
+  // display: inline-block;
+  // width: 100%;
+  padding-left: em($ratio--b);
+  color: $c-blue;
+  background-color: $c-blue--pale;
+  border-radius: $radius--b;
+  // @include state--hover {
+    // border-bottom-color: $c-grey2;
+  // }
+  position: relative;
+  &:after {
+    content: "\2195";
+    position: absolute;
+    right: em($ratio--b);
+    top: 0;
+    line-height: em($height--b);
+  }
+}
+.o-dropdown__select {
+  width: 100%;
+  // padding: em($ratio--xs) em($ratio--m) em($ratio--xs) 0;
+  height: em($height--b);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  // Extremely stupid fix for Firefox styling.
+  // https://bugzilla.mozilla.org/show_bug.cgi?id=649849
+  text-indent: .1px;
+  text-overflow: "";
+  @include appearance(none);
+  @include state--focus {
+    outline: 0;
+  }
+}

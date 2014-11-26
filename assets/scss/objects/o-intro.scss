@@ -1,0 +1,15 @@
+.nabidka {
+  margin-bottom: 2em;
+  padding-top: 1em;
+  .t-caps + p {
+    color: $c-hover;
+    font-size: em(14);
+  }
+}
+
+#intro {
+  p {
+    color: $c-text;
+    margin-top: 0;
+  }
+}
