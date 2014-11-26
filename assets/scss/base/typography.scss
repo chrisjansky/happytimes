@@ -22,6 +22,12 @@
   margin: .5em 0;
   -webkit-font-smoothing: antialiased;
 }
+.t-h4 {
+  font-family: $font--sans;
+  font-weight: normal;
+  font-size: em($unit--m);
+  @include margin(em($ratio--s) null);
+}
 [class^="t-caps"],
 [class*=" t-caps"] {
   font-size: em($unit--l);
@@ -29,19 +35,19 @@
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: .125em;
-  color: $c-hover;
-  margin: .25em 0;
+  color: $c-color3;
+  @include margin(em($ratio--s) null);
 }
 .t-caps--small {
   font-size: em($ratio--b);
 }
-h4 {
-  margin: .2em 0 .1em;
-}
-h5 {
-  margin: 1.2em 0 .8em;
-}
+
 p.big, nav, a.big, #kontakt ul.big {
   font-family: $font--sans;
   font-weight: normal;
+}
+
+.t-note {
+  font-size: em($unit--xs);
+  color: $c-grey3;
 }

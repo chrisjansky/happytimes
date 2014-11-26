@@ -2,3 +2,16 @@
 $font--serif: "comic-serif", Georgia, serif;
 $font--sans: "Capriola", "Lucida Sans", "Lucida Grande", sans-serif;
 $font--default: "Lucida Sans", "Lucida Grande", sans-serif;
+
+// Weights.
+$font__sans--regular: normal;
+$font__sans--bold: bold;
+
+$font__serif--regular: normal;
+$font__serif--bold: bold;
+
+// Defaults.
+$default__size: $unit--b;
+$default__family: $font__default;
+$default__weight: $font__sans--regular;
+$default__leading: 1.5;
