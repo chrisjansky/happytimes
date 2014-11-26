@@ -1,0 +1,61 @@
+extends templates/_basic
+
+block template-variables
+  - var pageSettings = {index: null}
+
+block template-body
+  .l-outer
+    include partials/_header
+
+    .l-inner
+      section#intro
+        h1.t-h1 Nezávazná poptávka
+    section#main.hrad
+      .top
+      .l-inner
+        section.cont.o-quote
+          h4.t-h4 Zvolené položky
+          ol.o-quote__list
+            each instance, index in ["Skákací hrad Hája", "Catering", "Modelování balónků"]
+              li #{index}. #{instance}
+          h4.t-h4 Poptávkový formulář
+          form.o-form
+            table
+              tr.o-form__row
+                td.o-form__cell
+                  span.o-form__required
+                    input.o-input--primary(type="text", placeholder="Jméno")
+                td.o-form__cell
+                  span.o-form__required
+                    input.o-input--primary(type="text", placeholder="Telefon")
+                td.o-form__cell
+                  span.o-form__required
+                    input.o-input--primary(type="text", placeholder="E-mail")
+              tr.o-form__row
+                td.o-form__cell
+                  h5.t-caps--small Datum
+                  .l-inline
+                    .l-inline__row
+                      .l-inline__cell.o-form__date
+                        input.o-input(type="number", min="1", max="31", placeholder="Den")
+                      .l-inline__cell
+                        .o-dropdown
+                          select.o-dropdown__select
+                            each instance in ["Leden", "Únor", "Březen", "Duben", "Květen", "Červen", "Červenec", "Srpen", "Září", "Říjen", "Listopad", "Prosinec"]
+                              option= instance
+                td.o-form__cell(colspan="2")
+                  h5.t-caps--small Místo
+                  input.o-input(type="text", placeholder="Adresa")
+              tr.o-from__row
+                td.o-form__cell(colspan="3")
+                  textarea.o-textarea(placeholder="Poznámka", rows="3")
+            .l-inline
+              .l-inline__row
+                .l-inline__cell
+                  small.t-note Povinné položky jsou označeny hvězdičkou.
+                .l-inline__cell
+                  button.o-submit.o-form__submit(type="button") Poptat
+        footer
+          h3.t-h3 Poznejte náš svět zábavy!
+          a.uline.big(href="atrakce") Více informací o našem sortimentu
+          include partials/_colophon
