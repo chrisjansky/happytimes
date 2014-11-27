@@ -17,7 +17,10 @@ block template-body
           h4.t-h4 Zvolené položky
           ol.o-quote__list
             each instance, index in ["Skákací hrad Hája", "Catering", "Modelování balónků"]
-              li #{index}. #{instance}
+              li
+                = instance
+                a.o-quote__remove.i-simple--negative(href="#") &times; Odebrat
+
           h4.t-h4 Poptávkový formulář
           form.o-form
             table
@@ -33,7 +36,7 @@ block template-body
                     input.o-input--primary(type="text", placeholder="E-mail")
               tr.o-form__row
                 td.o-form__cell
-                  h5.t-caps--small Datum
+                  h5.t-caps--small Datum konání akce
                   .l-inline
                     .l-inline__row
                       .l-inline__cell.o-form__date
@@ -44,7 +47,7 @@ block template-body
                             each instance in ["Leden", "Únor", "Březen", "Duben", "Květen", "Červen", "Červenec", "Srpen", "Září", "Říjen", "Listopad", "Prosinec"]
                               option= instance
                 td.o-form__cell(colspan="2")
-                  h5.t-caps--small Místo
+                  h5.t-caps--small Místo konání akce
                   input.o-input(type="text", placeholder="Adresa")
               tr.o-from__row
                 td.o-form__cell(colspan="3")

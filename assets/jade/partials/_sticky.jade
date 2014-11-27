@@ -2,7 +2,8 @@ aside.o-sticky
   .o-sticky__content
     h4.t-h4 Vaše poptávka
     ol.o-sticky__list
-      li Skákací hrad Hája
-      li Catering
-      li Modelování balónků
+      each instance, index in ["Skákací hrad Hája", "Catering", "Modelování balónků"]
+        li
+          = instance
+          a.o-sticky__remove.i-simple--negative(href="#") &times;
   a.o-sticky__button.o-button.o-button--block(href="poptavka") Nacenit

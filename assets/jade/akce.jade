@@ -11,8 +11,6 @@ block template-body
       section#intro
         h1.t-h1 Akce na klíč
         p.big Podívejte se, kde všude jsme šířili radost!
-      
-  #akce.l-outer.l-outer--kopec
 
     section.nabidka.superbox.o-offers
       each instance in actionItems
@@ -21,8 +19,16 @@ block template-body
           a.o-item__link(href="assets/images/nabidka/#{imageLink}", data-superbox)
             img(src="assets/images/nabidka/#{instance.image}", alt=instance.title)
           h3.t-h3: span!= instance.title
-          section.o-item__content(data-content)
-            .o-item__text
+          section.o-item__hidden(data-content)
+            ul.bxslider(data-images)
+              li
+                img(src="assets/images/nabidka/#{instance.image}", alt="Fotka atrakce")
+              - var n = 0
+              while n < 3
+                li
+                  img(src="http://unsplash.it/640/360/?image=#{n * 100}", alt="unsplash.it")
+                  - n++
+            .o-item__text(data-text)
               h2.o-item__title.t-h2: span!= instance.title
               p.big.o-item__big!= instance.description
               if (instance.more)
