@@ -66,11 +66,30 @@ gulp.task("styles", function () {
     }));
 });
 
-gulp.task("templates", function() {
+var
+  jsonFiles,
+  jsonGroup;
+
+gulp.task("fetch-data", function() {
+  jsonFiles = plugins.glob.sync(paths.glob_data),
+  jsonGroup = fs.readFileSync(jsonFiles[0], "utf8");
+
+  // Add other files if more than one.
+  if (jsonFiles.length > 1) {
+    for (i = 1; i < jsonFiles.length; i++) {
+      jsonGroup += ",\n" + fs.readFileSync(jsonFiles[i], "utf8");
+    }
+  }
+  // Make an array out of it.
+  jsonGroup = "{" + jsonGroup + "}";
+});
+
+gulp.task("templates", ["fetch-data"], function() {
   return gulp.src([paths.glob_jade, paths.ignore_jade])
     .pipe(plugins.plumber())
     .pipe(plugins.jade({
-      pretty: true
+      pretty: true,
+      locals: JSON.parse(jsonGroup)
     }))
     .pipe(gulp.dest(paths.development));
 });
@@ -79,13 +98,20 @@ gulp.task("pages", ["templates"], function() {
   plugins.browserSync.reload();
 });
 
+gulp.task("refresh", function() {
+  plugins.browserSync.reload();
+});
+
 gulp.task("scan", function () {
   // Using gulp.start soon to be deprecated.
   plugins.watch(paths.glob_scss, function(files, cb) {
     gulp.start("styles", cb);
   });
-  plugins.watch([paths.glob_jade, paths.glob_data, paths.glob_js], function(files, cb) {
+  plugins.watch([paths.glob_jade, paths.glob_data], function(files, cb) {
     gulp.start("pages", cb);
+  });
+  plugins.watch([paths.glob_js], function(files, cb) {
+    gulp.start("refresh", cb);
   });
 });
 
