@@ -46,3 +46,17 @@ a.blue {
     border-bottom-color: $c-hover;
   }
 }
+
+[class^="i-simple"],
+[class*=" i-simple"] {
+  text-decoration: none;
+  font-size: em($unit--s);
+}
+.i-simple--negative {
+  @include state--link {
+    color: $c-negative;
+  }
+  @include state--active {
+    color: tint($c-negative, 45%);
+  }
+}
