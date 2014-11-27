@@ -1,6 +1,9 @@
 .bxslider {
   @include clearfix;
   @include margin(0 null);
+  img {
+    @include margin(null auto);
+  }
 }
 .bx-wrapper {
   // WTF Default styles.

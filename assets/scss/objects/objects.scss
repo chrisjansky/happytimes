@@ -8,20 +8,11 @@
   margin-right: auto;
   margin-left: auto;
 
-  @include padding(null em($ratio--b));
-  @include media($phone--landscape) {
-    @include padding(null em($ratio--m));
-  }
-  @include media($tablet) {
-    @include padding(null em(180) null em($ratio--l));
-  }
-  @include media($desktop--narrow) {
-    max-width: em(1100);
-    @include padding(null em(180) null 5%);
-  }
+  max-width: em(1100);
+  padding-right: em(140);
+
   @include media($desktop--wide) {
-    max-width: em(1440);
-    @include padding(null 10%);
+    max-width: em(1200);
   }
 }
 
@@ -57,7 +48,7 @@
   right: 0;
   top: 30%;
   @include radius--left($radius--b);
-  width: em(180);
+  width: em(200);
 }
 .o-sticky__content {
   padding: em($ratio--b);
@@ -67,6 +58,16 @@
   padding-left: em($ratio--m);
   color: $c-grey3;
   font-size: em($unit--s);
+  li {
+    position: relative;
+    padding-right: em($ratio--s);
+  }
+}
+.o-sticky__remove {
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: em(28);
 }
 .o-sticky__button {
   @include radius--right(0);
@@ -91,11 +92,12 @@
   @include padding(em($ratio--b) null em($ratio--b) 0);
   border-top: $line--s dashed $c-color2--light;
   border-bottom: $line--s dashed $c-color2--light;
-  list-style: none;
-  @include clearfix;
+  padding-left: em($ratio--m);
   li {
-    float: left;
-    @include span-columns(1 of 3);
-    @include omega(3n);
+    padding-left: em($ratio--s);
   }
+}
+.o-quote__remove {
+  float: right;
+  line-height: em(24, $unit--s);
 }
