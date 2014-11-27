@@ -179,6 +179,21 @@ gulp.task("build-strip", ["build-compile"], function() {
 });
 
 /*
+---------------------------- Deploy. ----------------------------
+*/
+
+gulp.task("deploy", function() {
+  return gulp.src(paths.production + "**/*")
+    .pipe(plugins.ftp({
+      host: "chrisjansky.cz",
+      user: "w85799",
+      pass: "",
+      remotePath: "www/subdom/work/happytimes"
+    }))
+    .pipe(plugins.size());
+});
+
+/*
 ----------------------------- SVG. ------------------------------
 */
 
