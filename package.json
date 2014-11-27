@@ -12,6 +12,7 @@
     "glob": "latest",
     "gulp": "latest",
     "gulp-clean": "latest",
+    "gulp-ftp": "latest",
     "gulp-imagemin": "latest",
     "gulp-jade": "latest",
     "gulp-kss": "latest",
