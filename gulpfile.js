@@ -152,7 +152,7 @@ gulp.task("build-move", ["build-wipe"], function() {
 gulp.task("build-images", ["build-wipe"], function() {
   if (argv.full) {
     return gulp.src([paths.glob_images, paths.ignore_images])
-      .pipe(imagemin({
+      .pipe(plugins.imagemin({
         progressive: true,
         svgoPlugins: [{removeViewBox: false}]
       }))
