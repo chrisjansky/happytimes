@@ -58,6 +58,9 @@
   padding-left: em($ratio--m);
   color: $c-grey3;
   font-size: em($unit--s);
+  .o-sticky:hover & {
+    list-style: none;
+  }
   li {
     position: relative;
     padding-right: em($ratio--s);
@@ -65,9 +68,13 @@
 }
 .o-sticky__remove {
   position: absolute;
-  right: 0;
+  left: em(-$ratio--m);
   top: 0;
   line-height: em(28);
+  display: none;
+  .o-sticky:hover & {
+    display: block;
+  }
 }
 .o-sticky__button {
   @include radius--right(0);
