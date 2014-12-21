@@ -16,6 +16,9 @@ $line--s: 1px;
 // Heights
 $height--b: 40;
 
+$icon--b: 24;
+$icon--s: 20;
+
 // Golden ratio
 $ratio--xxh: round(golden-ratio($unit--b,  7));
 $ratio--xh:  round(golden-ratio($unit--b,  6));
