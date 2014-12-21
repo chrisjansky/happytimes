@@ -67,11 +67,14 @@
   }
 }
 .o-sticky__remove {
-  position: absolute;
-  left: em(-$ratio--m);
-  top: 0;
-  line-height: em(28);
   display: none;
+
+  position: absolute;
+  left: em(-18);
+  top: 0;
+  
+  font-size: #{$icon--s}px;
+  line-height: 1;
   .o-sticky:hover & {
     display: block;
   }
