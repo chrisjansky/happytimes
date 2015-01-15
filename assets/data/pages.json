@@ -1,22 +1,24 @@
-"navItems": [
-  {
-    "name": "Úvod",
-    "link": "index",
-    "title": "Zpět na úvodní stránku"
-  },
-  {
-    "name": "Nafukovací atrakce",
-    "link": "atrakce",
-    "title": "Podívejte se na náš sortiment"
-  },
-  {
-    "name": "Akce na klíč",
-    "link": "akce",
-    "title": "Jak se bavili ostatní"
-  },
-  {
-    "name": "Napište nám",
-    "link": "kontakt",
-    "title": "Rádi byste se na něco zeptali?"
-  }
-]
+{
+  "navItems": [
+    {
+      "name": "Úvod",
+      "link": "index",
+      "title": "Zpět na úvodní stránku"
+    },
+    {
+      "name": "Nafukovací atrakce",
+      "link": "atrakce",
+      "title": "Podívejte se na náš sortiment"
+    },
+    {
+      "name": "Akce na klíč",
+      "link": "akce",
+      "title": "Jak se bavili ostatní"
+    },
+    {
+      "name": "Napište nám",
+      "link": "kontakt",
+      "title": "Rádi byste se na něco zeptali?"
+    }
+  ]
+}

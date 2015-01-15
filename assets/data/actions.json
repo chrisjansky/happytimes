@@ -1,79 +1,81 @@
-"actionItems": [
-  {
-    "name": "vata",
-    "title": "Cukrová vata",
-    "image": "vata1.jpg",
-    "description": "V nabídce pro Vás máme několik profesionálních elektrických strojů na výrobu cukrové vaty s výkonem až 250 vat za hodinu, včetně vyškolené a usměvavé obsluhy. Pozvat si nás můžete na kulturní a společenské akce jako jsou:",
-    "more": "&middot; dětské dny, slavnosti a narozeninové oslavy<br>&middot; firemní a školní akce, volební kampaně<br>&middot; dny otevřených dveří<br>&middot; poutě<br>&middot; sportovní utkání"
-  },
-  {
-    "name": "hvezda",
-    "title": "Skákací hrad &mdash; Hvězda",
-    "image": "hvezda1.jpg",
-    "alt_image": "hvezda2.jpg",
-    "description": "Skládá se ze skákacího hradu, který je zabezpečen ze tří stran síťovinou, která brání případnému vypadnutí malých kosmonautů do volného prostoru a skluzavky. Tento typ skákacího hradu je velice vhodný jak pro soukromé oslavy tak i pro komerční akce.",
-    "more": "Jeho velké přednosti jsou lehká manipulace daná malou hmotností a minimální obsluha.",
-    "for": "Až pro 5 dětí ve věku do 8 let pod dozorem obsluhy.",
-    "technical": "Prostor záboru 3 &times; 4 &times; 2m, váha 30 kg s ma&times;imálním zatížením 226kg. Instalace možná na jakýkoliv povrch."
-  },
-  {
-    "name": "masinka",
-    "title": "Zábavní centrum &mdash; Mašinka",
-    "image": "masinka1.jpg",
-    "alt_image": "masinka2.jpg",
-    "description": "Nenáročný skákací hrad ve tvaru mašinky. Do atrakce se dá vlézt tunelem v jejím čele, ven se sklouzává po skluzavce. Zbylé strany jsou zabezpečeny síťovinou.",
-    "more": "Tento typ skákacího hradu je velice vhodný jak pro soukromé oslavy tak i pro komerční akce. Jeho velkou předností je lehká manipulace daná malou hmotností a minimální obsluha.",
-    "for": "Až pro 5 dětí ve věku do 8 let pod dozorem obsluhy.",
-    "technical": "Prostor záboru 5 &times; 2,5 &times; 2,4m, váha 25 kg. Instalace na jakýkoliv povrch."
-  },
-  {
-    "name": "mzc",
-    "title": "Malé zábavní centrum &mdash; 11 v 1",
-    "image": "mzc1.jpg",
-    "alt_image": "mzc2.jpg",
-    "description": "Toto zábavní centrum poskytne vašem dětem nádherní chvíle strávení skákáním, šplháním, prolézáním tunelem, klouzáním, možností hraní basketbalu nebo zábavným dováděním v této atrakci. Z tohoto důvodu je u dětí velice oblíbená a nechtějí toto zábavní centrum opustit.",
-    "for": "Vhodné až pro 6 dětí ve věku do 5 let pod dozorem obsluhy.",
-    "technical": "Prostor záboru 4,5 &times; 4,5 &times; 2,5m, váha 30 kg. Instalace na jakýkoliv povrch. Je potřeba příkon 220 V do 50 m."
-  },
-  {
-    "name": "narozeniny",
-    "title": "Narozeninové párty",
-    "image": "party1.jpg",
-    "alt_image": "party2.jpg",
-    "description": "<em>Pozvěte si k sobě na narozeniny svého dítka klauna Ferdu, animátory nebo dokonce cvičené papoušky!</em> Na oslavence a jeho kamarády čeká perfektní zábava v podobě připraveného programu, písniček, soutěží, modelování balónků, kouzlení a přetahování.",
-    "more": "Každý chlapec i dívka na oslavě dostane speciální DÁREK a pro oslavence je připraveno jedinečné překvapení. O průběh celé oslavy se postaráme, jsme schopni připravit celkovou výzdobu v podobě balónkových dekorací, héliových balónků a nejrůznějších drobností. Jako zvláštní servis také nabízíme tzv. narozeniny na klíč. Jsme schopni zajistit také malé občerstvení popřípadě catering."
-  },
-  {
-    "name": "balonky",
-    "title": "Modelování balónků",
-    "image": "model1.jpg",
-    "alt_image": "model2.jpg",
-    "description": "Výtvarník s dětmi modeluje postavičky z dlouhých barevných balónků a s jeho pomocí se každý naučí vytvořit základní tvary jako včelka, pejsek, meč či žirafa. Zručnější z dětí zvládnout i květinu nebo tygříka. Balónky se dají vytvarovat do mnohých tvarů a velikostí jakou jsou například všemožná zvířátka, letadla nebo čapky.",
-    "price": "Cena: 1. hodina 1500,&ndash;, každá další 600,&ndash;"
-  },
-  {
-    "name": "malovani",
-    "title": "Malování na obličej",
-    "image": "paint1.jpg",
-    "alt_image": "paint2.jpg",
-    "description": "Malování na obličej je velmi oblíbenou zábavou na pořádaných dětských akcích, eventech či narozeninových party.",
-    "more": "Děti i dospělí si mohou vybrat kresbu z přehledného katalogu nebo rozhodnout se pro svůj vymyšlený motiv. Používáme pouze dermatologicky testované barvy na tělo, splňující normy EU. Veškerý používaný materiál je hygienicky ošetřován před každým použitím.",
-    "price": "Cena: 1. hodina 1500,&ndash;, každá další 600,&ndash;"
-  },
-  {
-    "name": "maskoti",
-    "title": "Zábavní maskoti",
-    "image": "maskoti1.jpg",
-    "alt_image": "maskoti2.jpg",
-    "description": "Ať již plánujete narozeninovou párty, firemní večírek nebo hledáte vynikající reklamní poutač, můžeme vám nabídnout z celé palety různých maskotů.",
-    "more": "Zde je vidět pouze část z celkové naší nabídky, proto nás neváhejte kontaktovat pro bližší informace."
-  },
-  {
-    "name": "dekorace",
-    "title": "Balónkové dekorace",
-    "image": "dekor1.jpg",
-    "alt_image": "dekor2.jpg",
-    "description": "Balónkové dekorace udělají z vaší oslavy narozenin nebo firemního večírku nezapomenutelnou akci!",
-    "more": "Nabízíme vytvoření narozeninové dekorace na míru, balónky nafukované vzduchem i heliem či fóliové balónky s nejrůznějšími tvary. V případě zájmu lze připravit i speciální balónky s číslem nebo jménem."
-  }
-]
+{
+  "actionItems": [
+    {
+      "name": "vata",
+      "title": "Cukrová vata",
+      "image": "vata1.jpg",
+      "description": "V nabídce pro Vás máme několik profesionálních elektrických strojů na výrobu cukrové vaty s výkonem až 250 vat za hodinu, včetně vyškolené a usměvavé obsluhy. Pozvat si nás můžete na kulturní a společenské akce jako jsou:",
+      "more": "&middot; dětské dny, slavnosti a narozeninové oslavy<br>&middot; firemní a školní akce, volební kampaně<br>&middot; dny otevřených dveří<br>&middot; poutě<br>&middot; sportovní utkání"
+    },
+    {
+      "name": "hvezda",
+      "title": "Skákací hrad &mdash; Hvězda",
+      "image": "hvezda1.jpg",
+      "alt_image": "hvezda2.jpg",
+      "description": "Skládá se ze skákacího hradu, který je zabezpečen ze tří stran síťovinou, která brání případnému vypadnutí malých kosmonautů do volného prostoru a skluzavky. Tento typ skákacího hradu je velice vhodný jak pro soukromé oslavy tak i pro komerční akce.",
+      "more": "Jeho velké přednosti jsou lehká manipulace daná malou hmotností a minimální obsluha.",
+      "for": "Až pro 5 dětí ve věku do 8 let pod dozorem obsluhy.",
+      "technical": "Prostor záboru 3 &times; 4 &times; 2m, váha 30 kg s ma&times;imálním zatížením 226kg. Instalace možná na jakýkoliv povrch."
+    },
+    {
+      "name": "masinka",
+      "title": "Zábavní centrum &mdash; Mašinka",
+      "image": "masinka1.jpg",
+      "alt_image": "masinka2.jpg",
+      "description": "Nenáročný skákací hrad ve tvaru mašinky. Do atrakce se dá vlézt tunelem v jejím čele, ven se sklouzává po skluzavce. Zbylé strany jsou zabezpečeny síťovinou.",
+      "more": "Tento typ skákacího hradu je velice vhodný jak pro soukromé oslavy tak i pro komerční akce. Jeho velkou předností je lehká manipulace daná malou hmotností a minimální obsluha.",
+      "for": "Až pro 5 dětí ve věku do 8 let pod dozorem obsluhy.",
+      "technical": "Prostor záboru 5 &times; 2,5 &times; 2,4m, váha 25 kg. Instalace na jakýkoliv povrch."
+    },
+    {
+      "name": "mzc",
+      "title": "Malé zábavní centrum &mdash; 11 v 1",
+      "image": "mzc1.jpg",
+      "alt_image": "mzc2.jpg",
+      "description": "Toto zábavní centrum poskytne vašem dětem nádherní chvíle strávení skákáním, šplháním, prolézáním tunelem, klouzáním, možností hraní basketbalu nebo zábavným dováděním v této atrakci. Z tohoto důvodu je u dětí velice oblíbená a nechtějí toto zábavní centrum opustit.",
+      "for": "Vhodné až pro 6 dětí ve věku do 5 let pod dozorem obsluhy.",
+      "technical": "Prostor záboru 4,5 &times; 4,5 &times; 2,5m, váha 30 kg. Instalace na jakýkoliv povrch. Je potřeba příkon 220 V do 50 m."
+    },
+    {
+      "name": "narozeniny",
+      "title": "Narozeninové párty",
+      "image": "party1.jpg",
+      "alt_image": "party2.jpg",
+      "description": "<em>Pozvěte si k sobě na narozeniny svého dítka klauna Ferdu, animátory nebo dokonce cvičené papoušky!</em> Na oslavence a jeho kamarády čeká perfektní zábava v podobě připraveného programu, písniček, soutěží, modelování balónků, kouzlení a přetahování.",
+      "more": "Každý chlapec i dívka na oslavě dostane speciální DÁREK a pro oslavence je připraveno jedinečné překvapení. O průběh celé oslavy se postaráme, jsme schopni připravit celkovou výzdobu v podobě balónkových dekorací, héliových balónků a nejrůznějších drobností. Jako zvláštní servis také nabízíme tzv. narozeniny na klíč. Jsme schopni zajistit také malé občerstvení popřípadě catering."
+    },
+    {
+      "name": "balonky",
+      "title": "Modelování balónků",
+      "image": "model1.jpg",
+      "alt_image": "model2.jpg",
+      "description": "Výtvarník s dětmi modeluje postavičky z dlouhých barevných balónků a s jeho pomocí se každý naučí vytvořit základní tvary jako včelka, pejsek, meč či žirafa. Zručnější z dětí zvládnout i květinu nebo tygříka. Balónky se dají vytvarovat do mnohých tvarů a velikostí jakou jsou například všemožná zvířátka, letadla nebo čapky.",
+      "price": "Cena: 1. hodina 1500,&ndash;, každá další 600,&ndash;"
+    },
+    {
+      "name": "malovani",
+      "title": "Malování na obličej",
+      "image": "paint1.jpg",
+      "alt_image": "paint2.jpg",
+      "description": "Malování na obličej je velmi oblíbenou zábavou na pořádaných dětských akcích, eventech či narozeninových party.",
+      "more": "Děti i dospělí si mohou vybrat kresbu z přehledného katalogu nebo rozhodnout se pro svůj vymyšlený motiv. Používáme pouze dermatologicky testované barvy na tělo, splňující normy EU. Veškerý používaný materiál je hygienicky ošetřován před každým použitím.",
+      "price": "Cena: 1. hodina 1500,&ndash;, každá další 600,&ndash;"
+    },
+    {
+      "name": "maskoti",
+      "title": "Zábavní maskoti",
+      "image": "maskoti1.jpg",
+      "alt_image": "maskoti2.jpg",
+      "description": "Ať již plánujete narozeninovou párty, firemní večírek nebo hledáte vynikající reklamní poutač, můžeme vám nabídnout z celé palety různých maskotů.",
+      "more": "Zde je vidět pouze část z celkové naší nabídky, proto nás neváhejte kontaktovat pro bližší informace."
+    },
+    {
+      "name": "dekorace",
+      "title": "Balónkové dekorace",
+      "image": "dekor1.jpg",
+      "alt_image": "dekor2.jpg",
+      "description": "Balónkové dekorace udělají z vaší oslavy narozenin nebo firemního večírku nezapomenutelnou akci!",
+      "more": "Nabízíme vytvoření narozeninové dekorace na míru, balónky nafukované vzduchem i heliem či fóliové balónky s nejrůznějšími tvary. V případě zájmu lze připravit i speciální balónky s číslem nebo jménem."
+    }
+  ]
+}
