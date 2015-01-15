@@ -26,22 +26,18 @@ block template-body
     section.o-offers.superbox
       each instance in atractionItems
         article.o-item(class="o-item--#{instance.name}")
-          a.o-item__link(href="assets/images/nabidka/#{instance.image}", data-superbox)
-            img(src="assets/images/nabidka/#{instance.image}", alt=instance.title)
+          a.o-item__link(href="assets/images/#{instance.image}", data-superbox)
+            img(src="assets/images/#{instance.image}", alt=instance.title)
           h3.t-h3: span!= instance.title
           section.o-item__hidden(data-content)
-            ul.bxslider(data-images)
-              li
-                img(src="assets/images/nabidka/#{instance.image}", alt="Fotka atrakce")
-              - var n = 0
-              while n < 3
-                li
-                  img(src="http://unsplash.it/640/360/?image=#{n * 100}", alt="unsplash.it")
+            if instance.gallery
+              ul.bxslider(data-images)
+                - var n = 1
+                while n <= instance.gallery
+                  li
+                    img(src="assets/images/atrakce/#{instance.name}_#{n}.jpg", alt="Fotka atrakce")
                   - n++
-              //- div.o-item__pager(data-pager)
-              //-   each instance in [0, 1, 2, 3]
-              //-     a(data-slide-index=instance, href="")
-              //-       img(src="http://unsplash.it/60/60/?image=#{100 + instance}", alt="unsplash.it")
+
             .o-item__text(data-text)
               h2.o-item__title.t-h2: span!= instance.title
               p.big.o-item__big!= instance.description
