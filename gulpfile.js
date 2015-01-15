@@ -1,42 +1,14 @@
 var
   fs = require("fs"),
+  del = require("del"),
   argv = require("yargs").argv,
+  glob = require("glob"),
   gulp = require("gulp"),
+  vinyl = require("vinyl-paths"),
   plugins = require('gulp-load-plugins')({
-    pattern: ["glob", "gulp-*", "browser-*", "hygienist-*"]
-  });
-
-var paths = {
-  development: ".",
-  production: "public/",
-  styleguide: "public/styleguide/",
-
-  pages: "*.html",
-  jade: "assets/jade/*.jade",
-  glob_jade: "assets/jade/**/*.jade",
-  ignore_jade: "!assets/jade/**/_*",
-
-  scss: "assets/scss/*.scss",
-  css: "assets/css",
-  glob_scss: "assets/scss/**/*.scss",
-  glob_css: "assets/css/*.css",
-
-  js: "assets/js/*.js",
-  glob_js: "assets/js/**/*.js",
-
-  images: "assets/images",
-  glob_images: "assets/images/**/*",
-  ignore_images: "!assets/images/ignore{,/**}",
-
-  glob_svg: "assets/svg/*",
-
-  fallbacks: "assets/images/fallbacks",
-
-  glob_data: "assets/data/*.json",
-
-  kss: "assets/kss",
-  kss_css: "assets/css/styleguide.css"
-};
+    pattern: ["gulp-*", "browser-*", "hygienist-*"]
+  }),
+  config = require("./gulpconfig.json");
 
 /*
 ------------------------------ Basic. -----------------------------
@@ -45,8 +17,8 @@ var paths = {
 gulp.task("server", function() {
   plugins.browserSync({
     server: {
-      baseDir: paths.development,
-      middleware: plugins.hygienistMiddleware(paths.development)
+      baseDir: config.paths.development,
+      middleware: plugins.hygienistMiddleware(config.paths.development)
     },
     xip: true,
     notify: false
@@ -54,13 +26,13 @@ gulp.task("server", function() {
 });
 
 gulp.task("styles", function () {
-  return gulp.src(paths.scss)
+  return gulp.src(config.paths.scss)
     .pipe(plugins.plumber())
     .pipe(plugins.sass({
       errLogToConsole: true,
       includePaths: require("node-neat").with("bower_components/")
     }))
-    .pipe(gulp.dest(paths.css))
+    .pipe(gulp.dest(config.paths.css))
     .pipe(plugins.browserSync.reload({
       stream: true
     }));
@@ -71,27 +43,41 @@ var
   jsonGroup;
 
 gulp.task("fetch-data", function() {
-  jsonFiles = plugins.glob.sync(paths.glob_data),
-  jsonGroup = fs.readFileSync(jsonFiles[0], "utf8");
+  jsonFiles = glob.sync(config.paths.data_glob);
 
-  // Add other files if more than one.
-  if (jsonFiles.length > 1) {
-    for (i = 1; i < jsonFiles.length; i++) {
-      jsonGroup += ",\n" + fs.readFileSync(jsonFiles[i], "utf8");
+  // Check if files exist.
+  if (jsonFiles.length > 0) {
+
+    jsonGroup = fs.readFileSync(jsonFiles[0], "utf8");
+
+    // Add other files if more than one.
+    if (jsonFiles.length > 1) {
+      // Slicing always last two chars because of newline!
+      jsonGroup = jsonGroup.slice(0, -2);
+
+      for (i = 1; i < jsonFiles.length; i++) {
+        // Remove wrapping brackets.
+        var slicedFile = fs.readFileSync(jsonFiles[i], "utf8").slice(1, -2);
+        jsonGroup += ",\n" + slicedFile;
+      }
+
+      jsonGroup += "}";
     }
+
+  } else {
+    jsonGroup = null;
   }
-  // Make an array out of it.
-  jsonGroup = "{" + jsonGroup + "}";
 });
 
 gulp.task("templates", ["fetch-data"], function() {
-  return gulp.src([paths.glob_jade, paths.ignore_jade])
+  return gulp.src([config.paths.jade_glob, config.paths.jade_ignore])
     .pipe(plugins.plumber())
     .pipe(plugins.jade({
       pretty: true,
-      locals: JSON.parse(jsonGroup)
+      locals: JSON.parse(jsonGroup),
+      basedir: config.paths.development
     }))
-    .pipe(gulp.dest(paths.development));
+    .pipe(gulp.dest(config.paths.development));
 });
 
 gulp.task("pages", ["templates"], function() {
@@ -102,70 +88,63 @@ gulp.task("refresh", function() {
   plugins.browserSync.reload();
 });
 
-gulp.task("scan", function () {
-  // Using gulp.start soon to be deprecated.
-  plugins.watch(paths.glob_scss, function(files, cb) {
-    gulp.start("styles", cb);
-  });
-  plugins.watch([paths.glob_jade, paths.glob_data], function(files, cb) {
-    gulp.start("pages", cb);
-  });
-  plugins.watch([paths.glob_js], function(files, cb) {
-    gulp.start("refresh", cb);
-  });
+gulp.task("scan", function() {
+  gulp.watch(config.paths.scss_glob, ["styles"]);
+  gulp.watch([config.paths.jade_glob, config.paths.data_glob], ["pages"]);
+  gulp.watch(config.paths.js_glob, ["refresh"]);
 });
 
 /*
 ---------------------------- Build. ----------------------------
 */
 
-var productionFiles = [];
-
 // Delete the previous build.
 gulp.task("build-wipe", function() {
   if (argv.full) {
-    return gulp.src(paths.production, {read: false})
-      .pipe(plugins.clean());
+    return gulp.src(config.paths.production, {read: false})
+      .pipe(vinyl(del));
   } else return;
 });
 
 // Minify CSS and JS.
 gulp.task("build-compile", ["build-wipe"], function() {
-  return gulp.src(paths.pages)
+  return gulp.src(config.paths.pages)
     .pipe(plugins.usemin({
       js: [plugins.uglify()],
       css: [
+        plugins.autoprefixer({
+          cascade: false
+        }),
         plugins.minifyCss({
           keepSpecialComments: 0
         })]
     }))
-    .pipe(gulp.dest(paths.production));
+    .pipe(gulp.dest(config.paths.production));
 });
 
 // Move other assets to production folder.
 gulp.task("build-move", ["build-wipe"], function() {
-  gulp.src(productionFiles, {base: paths.development})
-    .pipe(gulp.dest(paths.production));
+  gulp.src(config.files, {base: config.paths.development})
+    .pipe(gulp.dest(config.paths.production));
 });
 
 // Minify images if provided with --full argument.
 gulp.task("build-images", ["build-wipe"], function() {
   if (argv.full) {
-    return gulp.src([paths.glob_images, paths.ignore_images])
+    return gulp.src([config.paths.images_glob, config.paths.images_ignore], {base: config.paths.development})
       .pipe(plugins.imagemin({
-        progressive: true,
-        svgoPlugins: [{removeViewBox: false}]
+        progressive: true
       }))
-      .pipe(gulp.dest(paths.production + paths.images));
+      .pipe(gulp.dest(config.paths.production));
   };
 });
 
 // Strip unused CSS afterwards if --uncss provided.
 gulp.task("build-strip", ["build-compile"], function() {
   if (argv.uncss) {
-    return gulp.src(paths.production + paths.glob_css)
+    return gulp.src(config.paths.production + config.paths.css_glob)
       .pipe(plugins.uncss({
-        html: plugins.glob.sync(paths.pages),
+        html: glob.sync(config.paths.pages),
         ignore: [/::?-[\w\d]+/]
       }))
       .pipe(plugins.minifyCss({
@@ -174,7 +153,7 @@ gulp.task("build-strip", ["build-compile"], function() {
       .pipe(plugins.size({
         showFiles: true
       }))
-      .pipe(gulp.dest(paths.production + paths.css));
+      .pipe(gulp.dest(config.paths.production + config.paths.css));
   }
 });
 
@@ -183,12 +162,12 @@ gulp.task("build-strip", ["build-compile"], function() {
 */
 
 gulp.task("deploy", function() {
-  return gulp.src(paths.production + "**/*")
+  return gulp.src(config.paths.production + "**/*", {base: config.paths.production})
     .pipe(plugins.ftp({
-      host: "chrisjansky.cz",
-      user: "w85799",
-      pass: "",
-      remotePath: "www/subdom/work/happytimes"
+      host: config.ftp.host,
+      user: config.ftp.user,
+      pass: config.ftp.pass,
+      remotePath: config.ftp.path
     }))
     .pipe(plugins.size());
 });
@@ -199,60 +178,81 @@ gulp.task("deploy", function() {
 
 // Delete the PNG fallbacks/ folder.
 gulp.task("svg-wipe", function() {
-  return gulp.src(paths.fallbacks, {read: false})
-    .pipe(plugins.clean());
+  return gulp.src([config.paths.fallbacks, config.paths.svg_build_glob], {read: false})
+    .pipe(vinyl(del));
+});
+
+// Optimize SVG.
+gulp.task("svg-optimize", ["svg-wipe"], function() {
+  return gulp.src(config.paths.svg_source_glob)
+    .pipe(plugins.imagemin())
+    .pipe(gulp.dest(config.paths.svg_build));
+});
+
+gulp.task("svg-combine", ["svg-optimize"], function() {
+  return gulp.src(config.paths.svg_build_glob)
+    .pipe(plugins.svgSprites({
+      mode: "symbols",
+      svg: {
+        symbols: "complete.svg"
+      },
+      preview: {
+        symbols: "index.html"
+      }
+    }))
+    .pipe(plugins.size({
+      showFiles: true
+    }))
+    .pipe(gulp.dest(config.paths.svg));
 });
 
 // Render PNG fallbacks for SVG.
-gulp.task("svg", ["svg-wipe"], function() {
-  return gulp.src(paths.glob_svg)
+gulp.task("svg", ["svg-combine"], function() {
+  // WTF error, needs src with ".svg".
+  return gulp.src(config.paths.svg_build_glob + ".svg")
     .pipe(plugins.svg2png())
-    .pipe(gulp.dest(paths.fallbacks));
+    .pipe(gulp.dest(config.paths.fallbacks));
 });
 
 /*
 -------------------------- Styleguide. --------------------------
 */
 
-var styleguideFiles = [
-  "assets/kss/assets/prism.css"
-];
-
 gulp.task("styleguide-wipe", ["build-wipe"], function() {
-  return gulp.src(paths.styleguide, {read: false})
-    .pipe(plugins.clean());
+  return gulp.src(config.paths.styleguide, {read: false})
+    .pipe(vinyl(del));
 });
 
 gulp.task("styleguide-move", ["styleguide-wipe"], function() {
-  return gulp.src(styleguideFiles, {base: paths.kss})
-    .pipe(gulp.dest(paths.styleguide));
+  return gulp.src(config.styleguide, {base: config.paths.kss})
+    .pipe(gulp.dest(config.paths.styleguide));
 });
 
 gulp.task("styleguide-styles", ["styleguide-move"], function() {
-  return gulp.src(paths.kss_css)
+  return gulp.src(config.paths.kss_css)
     .pipe(plugins.minifyCss({
       keepSpecialComments: 0
     }))
     .pipe(plugins.rename(function (path) {
         path.basename += "-min";
     }))
-    .pipe(gulp.dest(paths.production + paths.css));
+    .pipe(gulp.dest(config.paths.production + config.paths.css));
 });
 
 gulp.task("styleguide-compile", ["styleguide-styles"], function() {
-  return gulp.src(paths.glob_scss)
+  return gulp.src(config.paths.scss_glob)
     .pipe(plugins.kss({
-      overview: paths.kss + "/styleguide.md",
-      templateDirectory: paths.kss
+      overview: config.paths.kss + "styleguide.md",
+      templateDirectory: config.paths.kss
     }))
-    .pipe(gulp.dest(paths.styleguide));
+    .pipe(gulp.dest(config.paths.styleguide));
 });
 
 /*
 -------------------------- Task groups. ---------------------------
 */
 gulp.task("default", ["compile", "server", "scan"]);
-gulp.task("compile", ["styles", "pages"]);
+gulp.task("compile", ["styles", "templates"]);
 
 // Wipe first. Move, produce. Images if --full. Strip if --uncss.
 gulp.task("build", ["build-move", "build-images", "build-strip"]);
