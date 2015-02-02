@@ -9,7 +9,7 @@
 
   SuperBox, the lightbox reimagined. Fully responsive HTML5 image galleries.
 */
-;(function($) {   
+;(function($) {
   $.fn.SuperBox = function(options) {
     
     var superbox = $('<div class="superbox-show"></div>');
@@ -21,25 +21,31 @@
     
     return this.each(function() {
       
-      $('[data-superbox]').click(function(e) {
-        e.preventDefault();
+      $("[data-superbox]").click(function(event) {
+        event.preventDefault();
     
-        var $this = $(this);
-        var $content = $this.siblings("[data-content]");
-        var $images = $content.find("[data-images]");
-        var $text = $content.find("[data-text]");
+        var
+          $this = $(this),
+          $content = $this.siblings("[data-content]"),
+          $images = $content.find("[data-images]"),
+          $text = $content.find("[data-text]");
 
         if ($images.length > 0) {
           superboximg
+            .css("opacity", 0)
             .html($images[0].outerHTML);
 
-          var $imgArray = $images.find("img");
-
-          superboximg.find("[data-images]").bxSlider({
-            "adaptiveHeight": true,
-            buildPager: function(slideIndex) {
-              return $imgArray[slideIndex].outerHTML;
-            }
+          superbox.imagesLoaded(function() {
+            var $imgArray = $images.find("img");
+            superboximg.find("[data-images]").bxSlider({
+              "adaptiveHeight": true,
+              buildPager: function(slideIndex) {
+                return $imgArray[slideIndex].outerHTML;
+              },
+              onSliderLoad: function() {
+                superboximg.css("opacity", 1);
+              }
+            });
           });
         } else {
           superboximg.empty();
@@ -48,24 +54,22 @@
         superboxcont
           .html(superboxclose)
           .append($text[0].outerHTML);
-        
-        if ($this.next().hasClass('superbox-show')) {
-          superbox.toggle();
-        } else {
-          superbox.insertAfter($this.parent()).css('display', 'block');
-        }
 
-        setTimeout(function() {
-          $('html, body').stop(true, true).animate({
+          if ($this.next().hasClass("superbox-show")) {
+            superbox.toggle();
+          } else {
+            superbox.insertAfter($this.parent()).css("display", "block");
+          }
+
+          $("html, body").stop(true, true).animate({
             scrollTop: superbox.position().top
-          }, '400');
-        }, 100);
+          }, durBasic);
+        });
+
+      $(".superbox").on("click", ".superbox-close", function() {
+        $(".superbox-show").slideUp(durShort);
       });
-            
-      $('.superbox').on('click', '.superbox-close', function() {
-        $('.superbox-show').slideUp(250);
-      });
-      
+
     });
   };
 })(jQuery);
