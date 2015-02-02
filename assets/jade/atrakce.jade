@@ -26,8 +26,8 @@ block template-body
     section.o-offers.superbox
       each instance in atractionItems
         article.o-item(class="o-item--#{instance.name}")
-          a.o-item__link(href="assets/images/#{instance.image}", data-superbox)
-            img(src="assets/images/#{instance.image}", alt=instance.title)
+          a.o-item__link(href="assets/images/atrakce/#{instance.name}.jpg", data-superbox)
+            img(src="assets/images/atrakce/#{instance.name}.jpg", alt=instance.title)
           h3.t-h3: span!= instance.title
           section.o-item__hidden(data-content)
             if instance.gallery
