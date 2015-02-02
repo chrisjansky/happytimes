@@ -6,7 +6,7 @@ var
   gulp = require("gulp"),
   vinyl = require("vinyl-paths"),
   plugins = require('gulp-load-plugins')({
-    pattern: ["gulp-*", "browser-*", "hygienist-*"]
+    pattern: ["gulp-*", "browser-*", "hygienist-*", "json-sass"]
   }),
   config = require("./gulpconfig.json");
 
@@ -25,8 +25,16 @@ gulp.task("server", function() {
   });
 });
 
+gulp.task("json-sass", function () {
+  return fs.createReadStream(config.paths.data + "palette.json")
+    .pipe(plugins.jsonSass({
+      prefix: "$json: ",
+    }))
+    .pipe(fs.createWriteStream(config.paths.scss + "styleguide/json.scss"));
+});
+
 gulp.task("styles", function () {
-  return gulp.src(config.paths.scss)
+  return gulp.src(config.paths.scss_root)
     .pipe(plugins.plumber())
     .pipe(plugins.sass({
       errLogToConsole: true,
@@ -185,7 +193,11 @@ gulp.task("svg-wipe", function() {
 // Optimize SVG.
 gulp.task("svg-optimize", ["svg-wipe"], function() {
   return gulp.src(config.paths.svg_source_glob)
-    .pipe(plugins.imagemin())
+    .pipe(plugins.imagemin({
+      svgoPlugins: [{
+        collapseGroups: false
+      }]
+    }))
     .pipe(gulp.dest(config.paths.svg_build));
 });
 
