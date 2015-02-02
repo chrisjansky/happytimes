@@ -1,81 +1,116 @@
 {
   "actionItems": [
     {
+      "name": "nafukovaci",
+      "title": "Nafukovací atrakce",
+      "description": "Profesionální nafukovací atrakce pro děti, dospívající ale i dospělé!",
+      "more": "Plánujete svou akci a&nbsp;chtěli byste, aby byla pro zúčastněné nezapomenutelná? Poté na ní nesmí chybět profesionální nafukovací atrakce. Detailní seznam atrakcí naleznete <a href='http://happytimes.cz/atrakce'>zde</a>. Nabízíme velké množství profesionálních nafukovacích atrakcí &ndash; skákací hrady, skluzavky, sportovní atrakce a&nbsp;mnoho dalšího!",
+      "gallery": 5
+    },
+    {
+      "name": "podia",
+      "title": "Pódia, světla a&nbsp;zvuk",
+      "description": "Nabízíme profesionální zvukovou a&nbsp;světelnou techniku včetně pódií!",
+      "more": "Umíme ozvučit a&nbsp;osvětlit od malých rodinných oslav až po velké koncerty s mnoha tisíci diváky. Disponujeme velkým množstvím jak zvukové tak i světelné techniky &ndash; od mixážních pultů a&nbsp;reproboxů až po světelné efekty a&nbsp;lasery. Velikost pódia umíme přizpůsobovat dle požadavků zákazníka.",
+      "gallery": 5
+    },
+    {
+      "name": "catering",
+      "title": "Catering",
+      "description": "Nabídněte hostům vaší pořádané akce kvalitní občerstvení!",
+      "more": "V nabídce máme jak klasické stánkové občerstvení tak i luxusní catering na míru! Jsme schopni zajistit občerstvení v podobě od jednochodového základního menu až po vícechodové luxusní překvapení! Na základě požadavků zákazníka je pro nás standardem připravovat i tematický catering &ndash; např. vegetariánská či RAW menu.",
+      "gallery": 5
+    },
+    {
       "name": "vata",
       "title": "Cukrová vata",
-      "image": "vata1.jpg",
-      "description": "V nabídce pro Vás máme několik profesionálních elektrických strojů na výrobu cukrové vaty s výkonem až 250 vat za hodinu, včetně vyškolené a usměvavé obsluhy. Pozvat si nás můžete na kulturní a společenské akce jako jsou:",
-      "more": "&middot; dětské dny, slavnosti a narozeninové oslavy<br>&middot; firemní a školní akce, volební kampaně<br>&middot; dny otevřených dveří<br>&middot; poutě<br>&middot; sportovní utkání"
+      "description": "Vykouzlete úsměv dětem na obličeji naší exkluzivní cukrovou vatou!",
+      "more": "Vlastníme profesionální stroje na cukrovou vatu včetně originálních a&nbsp;atestovaných příchutí! Výběr příchuti cukrové vaty je samozřejmostí! Kombinace profesionálně vyhlížejícího retro vozíku, vždy usměvavé obsluhy a&nbsp;nikdy nešizené cukrové vaty z kvalitních příchutí vás dokáže zajisté 100% okouzlit a&nbsp;naši cukrovou vatu si zamilovat!",
+      "gallery": 5
     },
     {
-      "name": "hvezda",
-      "title": "Skákací hrad &mdash; Hvězda",
-      "image": "hvezda1.jpg",
-      "alt_image": "hvezda2.jpg",
-      "description": "Skládá se ze skákacího hradu, který je zabezpečen ze tří stran síťovinou, která brání případnému vypadnutí malých kosmonautů do volného prostoru a skluzavky. Tento typ skákacího hradu je velice vhodný jak pro soukromé oslavy tak i pro komerční akce.",
-      "more": "Jeho velké přednosti jsou lehká manipulace daná malou hmotností a minimální obsluha.",
-      "for": "Až pro 5 dětí ve věku do 8 let pod dozorem obsluhy.",
-      "technical": "Prostor záboru 3 &times; 4 &times; 2m, váha 30 kg s ma&times;imálním zatížením 226kg. Instalace možná na jakýkoliv povrch."
+      "name": "cupcakes",
+      "title": "Cupcakes",
+      "description": "100% domácí Cupcakes a&nbsp;Cakepops na zakázku pro Vás!",
+      "more": "Objednejte si naprosto výtečné, sladké pokušení na vaší oslavu, či firemní akci. Počet i vzhled je jen na Vás, vyrobíme vám vše na zakázku, podle vašich představ.",
+      "gallery": 3
     },
     {
-      "name": "masinka",
-      "title": "Zábavní centrum &mdash; Mašinka",
-      "image": "masinka1.jpg",
-      "alt_image": "masinka2.jpg",
-      "description": "Nenáročný skákací hrad ve tvaru mašinky. Do atrakce se dá vlézt tunelem v jejím čele, ven se sklouzává po skluzavce. Zbylé strany jsou zabezpečeny síťovinou.",
-      "more": "Tento typ skákacího hradu je velice vhodný jak pro soukromé oslavy tak i pro komerční akce. Jeho velkou předností je lehká manipulace daná malou hmotností a minimální obsluha.",
-      "for": "Až pro 5 dětí ve věku do 8 let pod dozorem obsluhy.",
-      "technical": "Prostor záboru 5 &times; 2,5 &times; 2,4m, váha 25 kg. Instalace na jakýkoliv povrch."
+      "name": "animatori",
+      "title": "Animátoři, maskoti",
+      "description": "Vyčarujme dětské úsměvy i během programových přestávek! Nabízíme velkou škálu maskotů a&nbsp;animátorů, kteří se o dětskou zábavu zaručeně postarají!",
+      "more": "Nabízíme širokou paletu zábavních činností pro děti a&nbsp;dospívající &ndash; od tvořivého modelování balónků, tance přes facepainting až po tvořivé dílny pro děti! Dále máme velkou nabídku zajímavých maskotů, kteří si s dětmi zatancují, rádi se s nimi vyfotí či doplní program našeho klaunského vystoupení.",
+      "gallery": 5
     },
     {
-      "name": "mzc",
-      "title": "Malé zábavní centrum &mdash; 11 v 1",
-      "image": "mzc1.jpg",
-      "alt_image": "mzc2.jpg",
-      "description": "Toto zábavní centrum poskytne vašem dětem nádherní chvíle strávení skákáním, šplháním, prolézáním tunelem, klouzáním, možností hraní basketbalu nebo zábavným dováděním v této atrakci. Z tohoto důvodu je u dětí velice oblíbená a nechtějí toto zábavní centrum opustit.",
-      "for": "Vhodné až pro 6 dětí ve věku do 5 let pod dozorem obsluhy.",
-      "technical": "Prostor záboru 4,5 &times; 4,5 &times; 2,5m, váha 30 kg. Instalace na jakýkoliv povrch. Je potřeba příkon 220 V do 50 m."
+      "name": "klauni",
+      "title": "Klaunská vystoupení",
+      "description": "Využijte našich klaunských vystoupení k doplnění vašeho programu pro děti!",
+      "more": "Vystoupení mohou být různě dlouhá s různými tématy &ndash; s kouzly, papoušky, s tancem a&nbsp;zábavou pro děti a&nbsp;mnoho dalšího! Dle vašeho požadavku jsme schopni sestavit jakkoli dlouhý zábavný program pro děti obsahující nejen vystoupení klauna, ale také animátorů, maskotů atd.",
+      "gallery": 3
     },
     {
-      "name": "narozeniny",
-      "title": "Narozeninové párty",
-      "image": "party1.jpg",
-      "alt_image": "party2.jpg",
-      "description": "<em>Pozvěte si k sobě na narozeniny svého dítka klauna Ferdu, animátory nebo dokonce cvičené papoušky!</em> Na oslavence a jeho kamarády čeká perfektní zábava v podobě připraveného programu, písniček, soutěží, modelování balónků, kouzlení a přetahování.",
-      "more": "Každý chlapec i dívka na oslavě dostane speciální DÁREK a pro oslavence je připraveno jedinečné překvapení. O průběh celé oslavy se postaráme, jsme schopni připravit celkovou výzdobu v podobě balónkových dekorací, héliových balónků a nejrůznějších drobností. Jako zvláštní servis také nabízíme tzv. narozeniny na klíč. Jsme schopni zajistit také malé občerstvení popřípadě catering."
-    },
-    {
-      "name": "balonky",
-      "title": "Modelování balónků",
-      "image": "model1.jpg",
-      "alt_image": "model2.jpg",
-      "description": "Výtvarník s dětmi modeluje postavičky z dlouhých barevných balónků a s jeho pomocí se každý naučí vytvořit základní tvary jako včelka, pejsek, meč či žirafa. Zručnější z dětí zvládnout i květinu nebo tygříka. Balónky se dají vytvarovat do mnohých tvarů a velikostí jakou jsou například všemožná zvířátka, letadla nebo čapky.",
-      "price": "Cena: 1. hodina 1500,&ndash;, každá další 600,&ndash;"
-    },
-    {
-      "name": "malovani",
-      "title": "Malování na obličej",
-      "image": "paint1.jpg",
-      "alt_image": "paint2.jpg",
-      "description": "Malování na obličej je velmi oblíbenou zábavou na pořádaných dětských akcích, eventech či narozeninových party.",
-      "more": "Děti i dospělí si mohou vybrat kresbu z přehledného katalogu nebo rozhodnout se pro svůj vymyšlený motiv. Používáme pouze dermatologicky testované barvy na tělo, splňující normy EU. Veškerý používaný materiál je hygienicky ošetřován před každým použitím.",
-      "price": "Cena: 1. hodina 1500,&ndash;, každá další 600,&ndash;"
-    },
-    {
-      "name": "maskoti",
-      "title": "Zábavní maskoti",
-      "image": "maskoti1.jpg",
-      "alt_image": "maskoti2.jpg",
-      "description": "Ať již plánujete narozeninovou párty, firemní večírek nebo hledáte vynikající reklamní poutač, můžeme vám nabídnout z celé palety různých maskotů.",
-      "more": "Zde je vidět pouze část z celkové naší nabídky, proto nás neváhejte kontaktovat pro bližší informace."
+      "name": "dilny",
+      "title": "Kreativní dětské dílny",
+      "description": "Zapojme děti do kreativní a&nbsp;tvořivé práce pomocí našich dětských dílniček!",
+      "more": "Prohlubme kreativitu a&nbsp;tvořivost dětí v našich dílničkách pomocí modelování balónků, vatičkování (pomocí výrobníku na cukrovou vatu si děti točí svou vlastní cukrovou vatu!), zdobení tematických perníčků či výroba krajek. Děti jsou vedeny profesionálem, který jim je neustále k dispozici &ndash; radí, aktivně pomáhá, připravuje. Zhotovený výrobek zůstává danému dítku &ndash; to jej může darovat jako dárek či si nechat na památku :)",
+      "gallery": 5
     },
     {
       "name": "dekorace",
       "title": "Balónkové dekorace",
-      "image": "dekor1.jpg",
-      "alt_image": "dekor2.jpg",
-      "description": "Balónkové dekorace udělají z vaší oslavy narozenin nebo firemního večírku nezapomenutelnou akci!",
-      "more": "Nabízíme vytvoření narozeninové dekorace na míru, balónky nafukované vzduchem i heliem či fóliové balónky s nejrůznějšími tvary. V případě zájmu lze připravit i speciální balónky s číslem nebo jménem."
+      "description": "Dokresleme celé prostředí pořádané akce tematickými balónkovými dekoracemi!",
+      "more": "Na základě zákazníkova požadavku umíme vytvořit všelijaké dekorace z balónků &ndash; vstupní brány, nápisy, jednoduché dekorace, ale také například automobil :) V kreativitě, velikosti a&nbsp;složitosti neznáme hranic!",
+      "gallery": 4
+    },
+    {
+      "name": "balonky",
+      "title": "Héliové balónky",
+      "description": "Obdarujte děti balónkami naplněné héliem!",
+      "more": "To a&nbsp;mnohem víc vám umíme splnit. Nabízíme velkou paletu barev, velikostí i tvarů héliových balónků, které dokážeme také potisknout například firemním logem, grafikou či textem! Přijedeme na vaši akci a&nbsp;rádi budeme nafouklé balónky dětem rozdávat.",
+      "gallery": 4
+    },
+    {
+      "name": "malovani",
+      "title": "Malování na tělo i obličej",
+      "description": "Díky našim profesionálním malířům se může vaše dítě stát oblíbeným zvířátkem či pohádkovou bytostí.",
+      "more": "Děti i dospělí si mohou vybrat kresbu z přehledného katalogu nebo se rozhodnout pro svůj vymyšlený motiv. Používáme pouze dermatologicky testované barvy na tělo, splňující normy EU. Veškerý používaný materiál je hygienicky ošetřován před každým použitím.",
+      "gallery": 5
+    },
+    {
+      "name": "horolezecka",
+      "title": "Mobilní horolezecká stěna",
+      "description": "Překvapte účastníky vaší akce mobilní, tři metry vysokou, horolezeckou stěnou!",
+      "more": "Horolezeckou stěnu vám přivezeme na místo, rozložíme a&nbsp;připravíme k používání. K dohledu horolezecké stěny můžete využít našich proškolených pracovníků, nebo to po proškolení necháme na vás. Horolezecká stěna je přibližně 3 metry vysoká z jejíchž vrcholu vede dolů dětská skluzavka. Pro maximální bezpečnost účastníků je stěna obskládána tlumící podložkou.",
+      "gallery": 3
+    },
+    {
+      "name": "poutove",
+      "title": "Pouťové atrakce",
+      "description": "Obohaťte svou zábavnou akci některou z námi nabízených pouťových atrakcí!",
+      "more": "Nechte svést dětské osazenstvo na řetízkovém kolotoči nebo zaskákat na obrovských trampolínách! Nabízíme více jak 30 pouťových atrakcí, stačí si jen vybrat a&nbsp;o vše další se již postaráme. Na vyžádání rádi pošleme kompletní seznam atrakcí.",
+      "gallery": 5
+    },
+    {
+      "name": "zaznam",
+      "title": "Audio a&nbsp;video záznam",
+      "description": "Vytvoříme pro vás dle domluvy audio i video záznam vámi pořádané akce.",
+      "more": "Během celé akce jsme schopni akci fotit či natáčet a&nbsp;vytvořit vám tak perfektní propagační či vzpomínkový materiál! Získané materiály z akce jsme schopni postprodukcí zpracovat do požadovaného formátu.",
+      "gallery": 4
+    },
+    {
+      "name": "zdroje",
+      "title": "Elektrocentrála",
+      "description": "Pořádáte svou akci mimo dosah elektrické sítě? Máme pro vás řešení!",
+      "more": "Vlastníme různé druhy elektrocentrál, které vám můžeme nabídnout k našim dalším službám. Jsme schopni zajistit od malých centrál pro napájení například nafukovacích atrakcí až velké elektrocentrály, které jsou schopny napájet celou oblast vaší akce.",
+      "gallery": 2
+    },
+    {
+      "name": "bublinkova",
+      "title": "Bublinová show",
+      "description": "Zažijte neuvěřitelnou bublinovou show s českým rekordmanem! ",
+      "more": "Profesionální exhibice, při které uvidíte fantastická kouzla a&nbsp;triky s bublinami neuvěřitelných velikostí a&nbsp;tvarů. Tato gradující show je kombinací těch nejlepších a&nbsp;divácky nejoblíbenějších prvků a&nbsp;její působivost je umocněna originální hudbou.",
+      "gallery": 7
     }
   ]
 }
