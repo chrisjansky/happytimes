@@ -4,8 +4,13 @@
   img {
     @include margin(null auto);
   }
+
+  list-style: none;
+  padding-left: 0;
 }
 .bx-wrapper {
+  margin-bottom: 200px;
+
   // WTF Default styles.
   .bx-viewport {
     left: 0;
