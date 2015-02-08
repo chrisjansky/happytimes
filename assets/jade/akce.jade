@@ -15,8 +15,8 @@ block template-body
     section.nabidka.superbox.o-offers
       each instance in actionItems
         article.o-item(class="o-item--#{instance.name}")
-          a.o-item__link(href="assets/images/akce/#{instance.name}.jpg", data-superbox)
-            img(src="assets/images/akce/#{instance.name}.jpg", alt!=instance.title)
+          a.o-item__link(href="assets/images/akce/#{instance.name}_new.jpg", data-superbox)
+            img(src="assets/images/akce/#{instance.name}_new.jpg", alt!=instance.title)
           h3.t-h3: span!= instance.title
           section.o-item__hidden(data-content)
             if instance.gallery
