@@ -37,6 +37,10 @@ block template-body
                   li
                     img(src="assets/images/atrakce/#{instance.name}_#{n}.jpg", alt="Fotka atrakce")
                   - n++
+            else
+              ul.bxslider(data-images)
+                li
+                  img(src="assets/images/atrakce/#{instance.name}.jpg", alt="Fotka atrakce")
 
             .o-item__text(data-text)
               h2.o-item__title.t-h2: span!= instance.title
