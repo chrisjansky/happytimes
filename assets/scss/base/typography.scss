@@ -13,6 +13,12 @@
   font-weight: normal;
   margin: .5em 0;
 }
+.t-h2--light {
+  color: $c-grey3;
+  span {
+    color: $c-grey4;
+  }
+}
 .t-h3 {
   font-size: em(26);
   font-family: $font--serif;

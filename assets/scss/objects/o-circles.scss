@@ -1,0 +1,71 @@
+.o-circles__title {
+  color: $c-color4;
+}
+
+.o-circles__text {
+  color: $c-grey4;
+
+  font-size: em($unit--s);
+}
+
+.o-circles__list {
+  list-style: none;
+
+  @include clearfix;
+}
+
+[class^="o-circles__item"],
+[class*=" o-circles__item"] {
+  float: left;
+
+  width: 50%;
+
+  text-align: center;
+}
+
+.o-circles__name {
+  margin-bottom: 0;
+}
+
+.o-circles__span {
+  font-size: em($unit--s);
+
+  color: $c-grey4;
+
+  a {
+    @include state--link {
+      color: $c-grey4;
+    }
+    @include state--active {
+      color: $c-grey6;
+    }
+  }
+}
+
+.o-circles__icon {
+  display: inline-block;
+
+  @include size(em(90) em(90));
+
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .o-circles__item--1 & {
+    background-color: $c-negative--light;
+
+    background-image: url("../images/icon_phone_orange.png");
+  }
+  .o-circles__item--2 & {
+    background-color: $c-color3--light;
+
+    background-image: url("../images/icon_mail.png");
+  }
+}
+
+.o-circles__item--1 {
+  color: $c-negative;
+}
+.o-circles__item--2 {
+  color: $c-color3--dark;
+}

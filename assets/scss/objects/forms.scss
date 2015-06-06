@@ -1,15 +1,21 @@
 // Text input.
 [class^="o-input"],
 [class*=" o-input"] {
+  width: 100%;
   height: em($height--b);
+
   @include padding(null em($ratio--b));
+
   border: 0;
   background-color: $c-blue--pale;
   color: $c-blue--dark;
+
+  border-radius: $radius--b;
+
   @include placeholder {
     color: $c-blue;
   }
-  border-radius: $radius--b;
+  
   @include state--focus {
     outline: 0;
     background-color: tint($c-blue--pale, 40%);
@@ -23,6 +29,9 @@
 }
 .o-form__required {
   position: relative;
+
+  display: block;
+
   &:after {
     content: "*";
     color: $c-blue;
@@ -34,6 +43,8 @@
 
 // Textarea.
 .o-textarea {
+  width: 100%;
+
   padding: em($ratio--s) em($ratio--b);
   border: 0;
   background-color: $c-blue--pale;

@@ -1,0 +1,54 @@
+.l-hrad--top {
+  height: 168px;
+  background: url('../images/hrad_top.png') no-repeat center;
+
+  margin-top: -100px;
+}
+
+.l-hrad {
+  background: url("../images/hrad_line.png") repeat-y center;
+
+  position: relative;
+  overflow: hidden;
+
+  padding: em(30) 0 em(60);
+
+  min-height: em(560);
+
+  &:before {
+    content: "";
+    background: url("../images/hrad_upper.png") no-repeat center;
+
+    @include position(absolute, 0 null null 0);
+
+    width: 100%;
+    height: 247px;
+  }
+
+  &:after {
+    content: "";
+    background: url("../images/hrad_lower.png") no-repeat center top;
+
+    @include position(absolute, null null 0 0);
+
+    width: 100%;
+    height: 340px;
+  }
+}
+
+.l-hrad--bottom {
+  position: relative;
+  overflow: hidden;
+
+  padding-top: em(56);
+
+  &:after {
+    content: "";
+    background: url("../images/hrad_lower.png") no-repeat center bottom;
+
+    @include position(absolute, 0 null null 0);
+
+    width: 100%;
+    height: 200px;
+  }
+}

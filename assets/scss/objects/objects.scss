@@ -84,17 +84,26 @@
   border-top-left-radius: 0;
 }
 
+.o-form {
+  padding-top: em($ratio--b);
+}
+.o-form__title {
+  color: $c-color4;
+}
 .o-form__cell {
   padding-bottom: em($ratio--b);
   & + & {
     padding-left: em($ratio--b);
   }
 }
+.o-form__cell--one {
+  width: 33.33%;
+}
 .o-form__submit {
   float: right;
 }
-.o-form__date {
-  width: em(84);
+.o-form__date .o-input {
+  width: em(142);
 }
 
 .o-quote__list {

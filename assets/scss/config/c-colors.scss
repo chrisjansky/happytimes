@@ -3,6 +3,7 @@
 $c-color1: hsb(95, 55, 70);
 $c-color2: hsb(195, 100, 85);
 $c-color3: hsb(85, 60, 90);
+$c-color4: hsb(331, 75, 94);
 
 $c-grey1: hsb(40, 5, 96);
 $c-grey2: hsb(40, 6, 80);
@@ -20,6 +21,7 @@ $c-beige: hsb(38, 22, 80);
 $c-yellow: hsb(56, 100, 100);
 
 $c-negative: hsb(35, 85, 95);
+$c-negative--light: hsb(35, 18, 100);
 
 $c-text: hsb(137, 65, 40);
 // $c-text--light: hsb(122, 60, 80);
@@ -32,13 +34,13 @@ $c-blue--dark: hsb(195, 60, 35);
 // Lighter.
 $c-color1--light: lighten($c-color1, 25%);
 $c-color2--light: lighten($c-color2, 25%);
-// $c-color3--light: lighten($c-color3, 25%);
+$c-color3--light: hsb(85, 14, 98);
 // $c-color4--light: lighten($c-color4, 25%);
 
 // Darker.
 $c-color1--dark: shade($c-color1, 50%);
 $c-color2--dark: shade($c-color2, 50%);
-// $c-color3--dark: shade($c-color3, 50%);
+$c-color3--dark: hsb(85, 53, 69);
 // $c-color4--dark: shade($c-color4, 50%);
 
 // Interactive.

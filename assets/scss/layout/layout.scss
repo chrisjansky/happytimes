@@ -8,4 +8,16 @@
 .l-inner {
   width: em(820);
   margin: 0 auto;
+
+  position: relative;
+  z-index: 100;
+}
+
+.l-inline__row {
+  display: table-row;
+}
+.l-inline--two {
+  .l-inline__cell {
+    width: 40%;
+  }
 }

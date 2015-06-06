@@ -33,9 +33,11 @@
 @import "misc/old";
 
 @import "layout/layout";
+@import "layout/l-hrad";
 @import "chj-framework/assets/scss/layout/l-inline";
 
 @import "objects/objects";
+@import "objects/o-circles";
 @import "objects/o-logo";
 @import "objects/o-header";
 @import "objects/o-middot";
@@ -44,9 +46,6 @@
 @import "objects/o-partners";
 @import "objects/o-item";
 @import "objects/forms";
-// @import "chj-framework/assets/scss/objects/o-input.scss";
-// @import "chj-framework/assets/scss/objects/o-textarea.scss";
-// @import "chj-framework/assets/scss/objects/o-submit.scss";
 
 @import "vendor/superbox";
 @import "vendor/bxslider";
