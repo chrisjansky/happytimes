@@ -37,12 +37,13 @@
       <div class="l-inner">
         <section id="intro">
           <h1 class="t-h1">Nezávazná poptávka</h1>
+          <p class="big">Svou nezávaznou poptávku nám můžete zaslat přes <a href="#formular">poptávkový formulář</a> nebo nás <a href="#kontakt">přímo kontaktovat</a> e-mailem či telefonicky.</p>
         </section>
       </div>
-      <section id="main" class="hrad">
-        <div class="top"></div>
+      <div class="l-hrad--top"></div>
+      <section class="l-hrad">
         <div class="l-inner">
-          <section class="cont o-quote">
+          <section class="o-quote">
             <h4 class="t-h4">Zvolené položky</h4>
             <ol class="o-quote__list">
               <li>Skákací hrad Hája<a href="#" class="o-quote__remove i-simple--negative">&times; Odebrat</a>
@@ -52,82 +53,113 @@
               <li>Modelování balónků<a href="#" class="o-quote__remove i-simple--negative">&times; Odebrat</a>
               </li>
             </ol>
-            <h4 class="t-h4">Poptávkový formulář</h4>
-            <form class="o-form">
-              <table>
-                <tr class="o-form__row">
-                  <td class="o-form__cell"><span class="o-form__required">
-                      <input type="text" placeholder="Jméno" class="o-input--primary"></span></td>
-                  <td class="o-form__cell"><span class="o-form__required">
-                      <input type="text" placeholder="Telefon" class="o-input--primary"></span></td>
-                  <td class="o-form__cell"><span class="o-form__required">
-                      <input type="text" placeholder="E-mail" class="o-input--primary"></span></td>
-                </tr>
-                <tr class="o-form__row">
-                  <td class="o-form__cell">
-                    <h5 class="t-caps--small">Datum konání akce</h5>
-                    <div class="l-inline">
-                      <div class="l-inline__row">
-                        <div class="l-inline__cell o-form__date">
-                          <input type="number" min="1" max="31" placeholder="Den" class="o-input">
-                        </div>
-                        <div class="l-inline__cell">
-                          <div class="o-dropdown">
-                            <select class="o-dropdown__select">
-                              <option>Leden</option>
-                              <option>Únor</option>
-                              <option>Březen</option>
-                              <option>Duben</option>
-                              <option>Květen</option>
-                              <option>Červen</option>
-                              <option>Červenec</option>
-                              <option>Srpen</option>
-                              <option>Září</option>
-                              <option>Říjen</option>
-                              <option>Listopad</option>
-                              <option>Prosinec</option>
-                            </select>
-                          </div>
+          </section>
+          <form id="formular" class="o-form">
+            <h2 class="o-form__title t-h2">Poptávkový formulář</h2>
+            <table>
+              <tr class="o-form__row">
+                <td class="o-form__cell o-form__cell--one"><span class="o-form__required">
+                    <input type="text" placeholder="Jméno" class="o-input--primary"></span></td>
+                <td class="o-form__cell o-form__cell--one"><span class="o-form__required">
+                    <input type="text" placeholder="Telefon" class="o-input--primary"></span></td>
+                <td class="o-form__cell o-form__cell--one"><span class="o-form__required">
+                    <input type="text" placeholder="E-mail" class="o-input--primary"></span></td>
+              </tr>
+              <tr class="o-form__row">
+                <td class="o-form__cell o-form__cell--one">
+                  <h5 class="t-caps--small">Datum konání akce</h5>
+                  <div class="l-inline l-inline--two">
+                    <div class="l-inline__row">
+                      <div class="l-inline__cell o-form__date">
+                        <input type="number" min="1" max="31" placeholder="Den" class="o-input">
+                      </div>
+                      <div class="l-inline__cell">
+                        <div class="o-dropdown">
+                          <select class="o-dropdown__select">
+                            <option>Leden</option>
+                            <option>Únor</option>
+                            <option>Březen</option>
+                            <option>Duben</option>
+                            <option>Květen</option>
+                            <option>Červen</option>
+                            <option>Červenec</option>
+                            <option>Srpen</option>
+                            <option>Září</option>
+                            <option>Říjen</option>
+                            <option>Listopad</option>
+                            <option>Prosinec</option>
+                          </select>
                         </div>
                       </div>
                     </div>
-                  </td>
-                  <td colspan="2" class="o-form__cell">
-                    <h5 class="t-caps--small">Místo konání akce</h5>
-                    <input type="text" placeholder="Adresa" class="o-input">
-                  </td>
-                </tr>
-                <tr class="o-from__row">
-                  <td colspan="3" class="o-form__cell">
-                    <textarea placeholder="Poznámka" rows="3" class="o-textarea"></textarea>
-                  </td>
-                </tr>
-              </table>
-              <div class="l-inline">
-                <div class="l-inline__row">
-                  <div class="l-inline__cell"><small class="t-note">Povinné položky jsou označeny hvězdičkou.</small></div>
-                  <div class="l-inline__cell">
-                    <button type="button" class="o-submit o-form__submit">Poptat</button>
                   </div>
+                </td>
+                <td colspan="2" class="o-form__cell">
+                  <h5 class="t-caps--small">Místo konání akce</h5>
+                  <input type="text" placeholder="Adresa" class="o-input">
+                </td>
+              </tr>
+              <tr class="o-from__row">
+                <td colspan="3" class="o-form__cell">
+                  <textarea placeholder="Poznámka" rows="3" class="o-textarea"></textarea>
+                </td>
+              </tr>
+            </table>
+            <div class="l-inline">
+              <div class="l-inline__row">
+                <div class="l-inline__cell"><small class="t-note">Povinné položky jsou označeny hvězdičkou.</small></div>
+                <div class="l-inline__cell">
+                  <button type="button" class="o-submit o-form__submit">Poptat</button>
                 </div>
               </div>
-            </form>
-          </section>
-          <footer>
-            <h3 class="t-h3">Poznejte náš svět zábavy!</h3><a href="atrakce" class="uline big">Více informací o našem sortimentu</a>
-            <div class="colophon">© 2013 HappyTimes &middot;
-              <script>
-                //<![CDATA[
-                <!--
-                var x="function f(x){var i,o=\"\",l=x.length;for(i=0;i<l;i+=2) {if(i+1<l)o+=x.charAt(i+1);try{o+=x.charAt(i);}catch(e){}}return o;}f(\"ufcnitnof x({)av r,i=o\\\"\\\"o,=l.xelgnhtl,o=;lhwli(e.xhcraoCedtAl(1/)3=!25{)rt{y+xx=l;=+;lc}tahce({)}}of(r=i-l;1>i0=i;--{)+ox=c.ahAr(t)i};erutnro s.buts(r,0lo;)f}\\\"(5),9\\\"\\\\34\\\\06\\\\02\\\\\\\\36\\\\0r\\\\\\\\\\\\01\\\\04\\\\03\\\\\\\\7@01\\\\\\\\j#}vtoSv4)nI<pubgbuyz{`hiGjc8jtn22\\\\04\\\\02\\\\\\\\35\\\\06\\\\02\\\\\\\\%X1E02\\\\\\\\23\\\\07\\\\00\\\\\\\\34\\\\0S\\\\23\\\\0M\\\\GR00\\\\01\\\\00\\\\\\\\\\\\t7\\\\03\\\\\\\\03\\\\03\\\\03\\\\\\\\37\\\\0I\\\\22\\\\03\\\\01\\\\\\\\01\\\\06\\\\01\\\\\\\\27\\\\02\\\\00\\\\\\\\17\\\\0;\\\\\\\"\\\\f(;} ornture;}))++(y)^(iAtdeCoarchx.e(odrChamCro.fngriSt+=;o27=1y%2;*=)yy)5+(9i>f({i+)i+l;i<0;i=r(foh;gten.l=x,l\\\"\\\\\\\"\\\\o=i,r va){,y(x fontincfu)\\\"\")";
-                while(x=eval(x));
-                //-->
-                //]]>
-              </script><a href="http://www.chrisjansky.cz" title="Portfolio autora" class="fright">Vytvořil Christian Jánský</a>
             </div>
-          </footer>
+          </form>
+          <div id="kontakt" class="o-circles">
+            <h2 class="o-circles__title t-h2">Kontaktujte nás</h2>
+            <p class="o-circles__text">Nechce se Vám vyplňovat poptávkový formulář? Stačí nám zavolat či napsat &mdash; na níže uvedených kontaktech Vám rádi zodpovíme veškeré dotazy!</p>
+            <ul class="o-circles__list">
+              <li class="o-circles__item--1">
+                <div class="o-circles__icon"></div>
+                <h4 class="o-circles__name t-h4">Telefon</h4><span class="o-circles__span">605 833 883</span>
+              </li>
+              <li class="o-circles__item--2">
+                <div class="o-circles__icon"></div>
+                <h4 class="o-circles__name t-h4">E-mail</h4><span class="o-circles__span"><script type="text/javascript">
+//<![CDATA[
+<!--
+var x="function f(x){var i,o=\"\",ol=x.length,l=ol;while(x.charCodeAt(l/13)!" +
+"=48){try{x+=x;l+=l;}catch(e){}}for(i=l-1;i>=0;i--){o+=x.charAt(i);}return o" +
+".substr(0,ol);}f(\")311,\\\"771\\\\syhb100\\\\_220\\\\000\\\\AY720\\\\KR[\\" +
+"\\\\\\@JBAQGnBJEC720\\\\n\\\\{\\\\\\\\Fn\\\\PGLIkgmlzrYwqx|.|f}ync/P6llzo&d" +
+"8!*ol330\\\\t\\\\520\\\\t\\\\r\\\\W410\\\\130\\\\320\\\\030\\\\100\\\\020\\" +
+"\\530\\\\520\\\\\\\"(f};o nruter};))++y(^)i(tAedoCrahc.x(edoCrahCmorf.gnirt" +
+"S=+o;721=%y;i=+y)311==i(fi{)++i;l<i;0=i(rof;htgnel.x=l,\\\"\\\"=o,i rav{)y," +
+"x(f noitcnuf\")"                                                             ;
+while(x=eval(x));
+//-->
+//]]>
+</script>
+</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
+      <div class="l-hrad--bottom">
+        <footer class="l-inner">
+          <h3 class="t-h3">Poznejte náš svět zábavy!</h3><a href="atrakce" class="uline big">Více informací o našem sortimentu</a>
+          <div class="colophon">© 2013 HappyTimes &middot;
+            <script>
+              //<![CDATA[
+              <!--
+              var x="function f(x){var i,o=\"\",l=x.length;for(i=0;i<l;i+=2) {if(i+1<l)o+=x.charAt(i+1);try{o+=x.charAt(i);}catch(e){}}return o;}f(\"ufcnitnof x({)av r,i=o\\\"\\\"o,=l.xelgnhtl,o=;lhwli(e.xhcraoCedtAl(1/)3=!25{)rt{y+xx=l;=+;lc}tahce({)}}of(r=i-l;1>i0=i;--{)+ox=c.ahAr(t)i};erutnro s.buts(r,0lo;)f}\\\"(5),9\\\"\\\\34\\\\06\\\\02\\\\\\\\36\\\\0r\\\\\\\\\\\\01\\\\04\\\\03\\\\\\\\7@01\\\\\\\\j#}vtoSv4)nI<pubgbuyz{`hiGjc8jtn22\\\\04\\\\02\\\\\\\\35\\\\06\\\\02\\\\\\\\%X1E02\\\\\\\\23\\\\07\\\\00\\\\\\\\34\\\\0S\\\\23\\\\0M\\\\GR00\\\\01\\\\00\\\\\\\\\\\\t7\\\\03\\\\\\\\03\\\\03\\\\03\\\\\\\\37\\\\0I\\\\22\\\\03\\\\01\\\\\\\\01\\\\06\\\\01\\\\\\\\27\\\\02\\\\00\\\\\\\\17\\\\0;\\\\\\\"\\\\f(;} ornture;}))++(y)^(iAtdeCoarchx.e(odrChamCro.fngriSt+=;o27=1y%2;*=)yy)5+(9i>f({i+)i+l;i<0;i=r(foh;gten.l=x,l\\\"\\\\\\\"\\\\o=i,r va){,y(x fontincfu)\\\"\")";
+              while(x=eval(x));
+              //-->
+              //]]>
+            </script><a href="http://www.chrisjansky.cz" title="Portfolio autora" class="fright">Vytvořil Christian Jánský</a>
+          </div>
+        </footer>
+      </div>
     </div>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script><!-- build:remove -->
     <script>window.jQuery || document.write("<script src='bower_components/jquery/dist/jquery.js'><\/script>")</script><!-- endbuild -->
