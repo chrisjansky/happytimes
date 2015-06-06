@@ -11,8 +11,9 @@ block template-body
       section#intro
         h1.t-h1 Napište nám
         p.big Zaujaly Vás naše služby? Ozvěte se, rádi připravíme zábavné odpoledne na míru právě Vám!
-    section#main.hrad
-      .top
+
+    .l-hrad--top
+    section#main.l-hrad
       .l-inner
         section.cont.o-contact
           h2.t-h2 Kontaktní informace
@@ -42,7 +43,9 @@ block template-body
             li.person Michal Šafránek
             li U Trati 687/13
             li 251 01, Říčany
-        footer
-          h3.t-h3 Poznejte náš svět zábavy!
-          a.uline.big(href="atrakce") Více informací o našem sortimentu
-          include partials/_colophon
+            
+    .l-hrad--bottom
+      footer.l-inner
+        h3.t-h3 Poznejte náš svět zábavy!
+        a.uline.big(href="atrakce") Více informací o našem sortimentu
+        include partials/_colophon

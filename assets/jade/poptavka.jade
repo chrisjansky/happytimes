@@ -10,10 +10,11 @@ block template-body
     .l-inner
       section#intro
         h1.t-h1 Nezávazná poptávka
-    section#main.hrad
-      .top
+        p.big Svou nezávaznou poptávku nám můžete zaslat přes <a href="#formular">poptávkový formulář</a> nebo nás <a href="#kontakt">přímo kontaktovat</a> e-mailem či telefonicky.
+    .l-hrad--top
+    section.l-hrad
       .l-inner
-        section.cont.o-quote
+        section.o-quote
           h4.t-h4 Zvolené položky
           ol.o-quote__list
             each instance, index in ["Skákací hrad Hája", "Catering", "Modelování balónků"]
@@ -21,44 +22,60 @@ block template-body
                 = instance
                 a.o-quote__remove.i-simple--negative(href="#") &times; Odebrat
 
-          h4.t-h4 Poptávkový formulář
-          form.o-form
-            table
-              tr.o-form__row
-                td.o-form__cell
-                  span.o-form__required
-                    input.o-input--primary(type="text", placeholder="Jméno")
-                td.o-form__cell
-                  span.o-form__required
-                    input.o-input--primary(type="text", placeholder="Telefon")
-                td.o-form__cell
-                  span.o-form__required
-                    input.o-input--primary(type="text", placeholder="E-mail")
-              tr.o-form__row
-                td.o-form__cell
-                  h5.t-caps--small Datum konání akce
-                  .l-inline
-                    .l-inline__row
-                      .l-inline__cell.o-form__date
-                        input.o-input(type="number", min="1", max="31", placeholder="Den")
-                      .l-inline__cell
-                        .o-dropdown
-                          select.o-dropdown__select
-                            each instance in ["Leden", "Únor", "Březen", "Duben", "Květen", "Červen", "Červenec", "Srpen", "Září", "Říjen", "Listopad", "Prosinec"]
-                              option= instance
-                td.o-form__cell(colspan="2")
-                  h5.t-caps--small Místo konání akce
-                  input.o-input(type="text", placeholder="Adresa")
-              tr.o-from__row
-                td.o-form__cell(colspan="3")
-                  textarea.o-textarea(placeholder="Poznámka", rows="3")
-            .l-inline
-              .l-inline__row
-                .l-inline__cell
-                  small.t-note Povinné položky jsou označeny hvězdičkou.
-                .l-inline__cell
-                  button.o-submit.o-form__submit(type="button") Poptat
-        footer
-          h3.t-h3 Poznejte náš svět zábavy!
-          a.uline.big(href="atrakce") Více informací o našem sortimentu
-          include partials/_colophon
+        form#formular.o-form
+          h2.o-form__title.t-h2 Poptávkový formulář
+          table
+            tr.o-form__row
+              td.o-form__cell.o-form__cell--one
+                span.o-form__required
+                  input.o-input--primary(type="text", placeholder="Jméno")
+              td.o-form__cell.o-form__cell--one
+                span.o-form__required
+                  input.o-input--primary(type="text", placeholder="Telefon")
+              td.o-form__cell.o-form__cell--one
+                span.o-form__required
+                  input.o-input--primary(type="text", placeholder="E-mail")
+            tr.o-form__row
+              td.o-form__cell.o-form__cell--one
+                h5.t-caps--small Datum konání akce
+                .l-inline.l-inline--two
+                  .l-inline__row
+                    .l-inline__cell.o-form__date
+                      input.o-input(type="number", min="1", max="31", placeholder="Den")
+                    .l-inline__cell
+                      .o-dropdown
+                        select.o-dropdown__select
+                          each instance in ["Leden", "Únor", "Březen", "Duben", "Květen", "Červen", "Červenec", "Srpen", "Září", "Říjen", "Listopad", "Prosinec"]
+                            option= instance
+              td.o-form__cell(colspan="2")
+                h5.t-caps--small Místo konání akce
+                input.o-input(type="text", placeholder="Adresa")
+            tr.o-from__row
+              td.o-form__cell(colspan="3")
+                textarea.o-textarea(placeholder="Poznámka", rows="3")
+          .l-inline
+            .l-inline__row
+              .l-inline__cell
+                small.t-note Povinné položky jsou označeny hvězdičkou.
+              .l-inline__cell
+                button.o-submit.o-form__submit(type="button") Poptat
+
+        #kontakt.o-circles
+          h2.o-circles__title.t-h2 Kontaktujte nás
+          p.o-circles__text Nechce se Vám vyplňovat poptávkový formulář? Stačí nám zavolat či napsat &mdash; na níže uvedených kontaktech Vám rádi zodpovíme veškeré dotazy!
+          ul.o-circles__list
+            li.o-circles__item--1
+              .o-circles__icon
+              h4.o-circles__name.t-h4 Telefon
+              span.o-circles__span 605 833 883
+            li.o-circles__item--2
+              .o-circles__icon
+              h4.o-circles__name.t-h4 E-mail
+              span.o-circles__span
+                include partials/_enkoder-email.html
+
+    .l-hrad--bottom
+      footer.l-inner
+        h3.t-h3 Poznejte náš svět zábavy!
+        a.uline.big(href="atrakce") Více informací o našem sortimentu
+        include partials/_colophon

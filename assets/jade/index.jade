@@ -31,26 +31,28 @@ block template-body
           a(href="kontakt") zavolat na telefon
           | .
 
-    section#main.hrad
-      .top
+    .l-hrad--top
+    section.l-hrad
       .l-inner
         section#social.cont
-          h2.t-h2
+          h2.t-h2.t-h2--light
             span
               | Přidejte si nás na 
               a.blue(href="https://www.facebook.com/HappyTimescz") Facebooku
             |  &hellip; dozvíte se o slevách a akcích jako první!
           #fb
             .fb-like-box(data-href="https://www.facebook.com/HappyTimescz", data-width="410", data-height="380", data-show-faces="false", data-stream="true", data-border-color="#eee", data-header="false")
-        footer
-          h3.t-h3 Poznejte náš svět zábavy!
-          a.uline.big(href="atrakce") Více informací o našem sortimentu
-          .o-partners
-            h5.o-partners__title.t-caps--small Spolupracujeme s
-            .o-partners__item(style="width: 7.5em")
-              a.o-partners__link(href="http://www.jlvcatering.cz/")
-                img.o-partners__image(src="assets/images/logo_masters-catering.png", alt="Master's Catering")
-            .o-partners__item
-              a.o-partners__link(href="http://www.laduv-kraj.cz/")
-                img.o-partners__image(src="assets/images/logo_lada.png", alt="Ladův Kraj")
-          include partials/_colophon
+
+    .l-hrad--bottom
+      footer.l-inner
+        h3.t-h3 Poznejte náš svět zábavy!
+        a.uline.big(href="atrakce") Více informací o našem sortimentu
+        .o-partners
+          h5.o-partners__title.t-caps--small Spolupracujeme s
+          .o-partners__item(style="width: 7.5em")
+            a.o-partners__link(href="http://www.jlvcatering.cz/")
+              img.o-partners__image(src="assets/images/logo_masters-catering.png", alt="Master's Catering")
+          .o-partners__item
+            a.o-partners__link(href="http://www.laduv-kraj.cz/")
+              img.o-partners__image(src="assets/images/logo_lada.png", alt="Ladův Kraj")
+        include partials/_colophon
