@@ -4,6 +4,8 @@
 .l-outer--kopec {
   background: url('../images/bg_kopec1.png') no-repeat center top;
   margin-top: em($ratio--m);
+
+  clear: both;
 }
 .l-inner {
   width: em(820);

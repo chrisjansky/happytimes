@@ -8,6 +8,10 @@
   list-style: none;
 }
 
+.m-footer {
+  clear: both;
+}
+
 footer {
   padding-bottom: 3em;
   width: 100%;
@@ -21,24 +25,24 @@ footer {
 // PRICE
 .o-price {
   clear: both;
-	@include clearfix;
-	background-color: $c-beige;
-	border-radius: $radius--b;
+  @include clearfix;
+  background-color: $c-beige;
+  border-radius: $radius--b;
   @include margin(em($ratio--m) null);
-	padding: em($ratio--b) em($ratio--l);
-	.left {
-		width: 40%;
-	}
-	.right {
-		width: 55%;
-	}
-	small {
-		display: block;
-		color: rgba($c-grey5, .5);
-		margin-top: em($ratio--m);
-		padding-top: em($ratio--b);
-		border-top: $line--s solid rgba($c-grey4, .25);
-	}
+  padding: em($ratio--b) em($ratio--l);
+  .left {
+    width: 40%;
+  }
+  .right {
+    width: 55%;
+  }
+  small {
+    display: block;
+    color: rgba($c-grey5, .5);
+    margin-top: em($ratio--m);
+    padding-top: em($ratio--b);
+    border-top: $line--s solid rgba($c-grey4, .25);
+  }
 }
 .o-price__list {
     font-size: em($unit--s);
@@ -46,90 +50,90 @@ footer {
   }
 // KONTAKT CONT
 #kontakt .cont {
-	padding-top: 3em;
-	.nolist {
-		width: 45%;
-	}
-	// BIG
-	.big {
-		height: 10em;
-		li {
-			font-size: em(27);
-			padding-left: 50px;
-		}
-		li.small {
-			font-size: em(17);
-			margin-top: 1em;
-		}
-		.mail {
-			background: url("../images/icon_mail.png") no-repeat left center;
-		}
-		.phone {
-			background: url("../images/icon_phone.png") no-repeat left center;
-			color: $c-color2;
-		}
-		.address {
-			background: url("../images/icon_address.png") no-repeat left center;
-		}
-	}
-	// SMALL
-	.small {
-		li {
-			padding-left: 50px;
-		}
-		.person {
-			background: url("../images/icon_person.png") no-repeat left center;
-		}
-	}
-	// FIRST
-	.first {
-		float: left;
-	}
-	.first + ul {
-		float: right;
-	}
-	.third {
-		float: left;
-		clear: both;
-	}
-	.third + ul {
-		float: right;
-	}
+  padding-top: 3em;
+  .nolist {
+    width: 45%;
+  }
+  // BIG
+  .big {
+    height: 10em;
+    li {
+      font-size: em(27);
+      padding-left: 50px;
+    }
+    li.small {
+      font-size: em(17);
+      margin-top: 1em;
+    }
+    .mail {
+      background: url("../images/icon_mail.png") no-repeat left center;
+    }
+    .phone {
+      background: url("../images/icon_phone.png") no-repeat left center;
+      color: $c-color2;
+    }
+    .address {
+      background: url("../images/icon_address.png") no-repeat left center;
+    }
+  }
+  // SMALL
+  .small {
+    li {
+      padding-left: 50px;
+    }
+    .person {
+      background: url("../images/icon_person.png") no-repeat left center;
+    }
+  }
+  // FIRST
+  .first {
+    float: left;
+  }
+  .first + ul {
+    float: right;
+  }
+  .third {
+    float: left;
+    clear: both;
+  }
+  .third + ul {
+    float: right;
+  }
 }
 
 .col {
-	&.left {
-		float: left;
-	}
-	&.right {
-		float: right;
-	}
+  &.left {
+    float: left;
+  }
+  &.right {
+    float: right;
+  }
 }
 p.big, a.big {
-	font-size: em($unit--xl);
+  font-size: em($unit--xl);
 }
 p {
-	margin: .6em 0;
+  margin: .6em 0;
 }
 p em {
-	font-style: normal;
-	font-weight: normal;
-	color: $c-yellow;
+  font-style: normal;
+  font-weight: normal;
+  color: $c-yellow;
 }
 small {
-	font-size: em(14);
-	line-height: 160%;
+  font-size: em(14);
+  line-height: 160%;
 }
 nav a, a.btn {
-	text-decoration: none;
+  text-decoration: none;
 }
 a.uline, p a,
 .colophon a, #kontakt ul.nolist a {
-	text-decoration: none;
-	border-bottom: 1px solid $c-color1;
-	&:hover {
-		border-bottom-color: $c-hover } }
+  text-decoration: none;
+  border-bottom: 1px solid $c-color1;
+  &:hover {
+    border-bottom-color: $c-hover } }
 
 .fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
-	width: 100% !important;
+  width: 100% !important;
 }

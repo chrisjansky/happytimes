@@ -37,7 +37,7 @@
     color: $c-blue;
     position: absolute;
     right: em($ratio--b);
-    top: 0;
+    top: em($ratio--s);
   }
 }
 
